@@ -4,64 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media Gallery | GTV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 2rem;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(145deg, #0d1117, #1f2937);
-      color: white;
+      background: linear-gradient(145deg, #0f172a, #1e293b);
+      color: #fff;
       text-align: center;
     }
     h1 {
-      font-size: 2.75rem;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
     p.subtitle {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: #94a3b8;
       margin-bottom: 2rem;
     }
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
     }
     .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      border: 2px solid #00e0ff;
-      box-shadow: 0 0 12px rgba(0, 224, 255, 0.2);
+      width: 300px;
+      border-radius: 10px;
+      border: 3px solid #38bdf8;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
     }
     .back-button {
+      margin-top: 3rem;
       display: inline-block;
-      margin-top: 2.5rem;
       padding: 10px 20px;
-      background-color: #00e0ff;
+      background-color: #38bdf8;
       color: #000;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
     }
     .back-button:hover {
-      background-color: #00b2cc;
+      background-color: #0ea5e9;
     }
   </style>
 </head>
 <body>
-  <h1>📸 GTV Media Gallery</h1>
-  <p class="subtitle">Group memories, past event snapshots, and more.</p>
+  <h1>📸 Media Gallery</h1>
+  <p class="subtitle">A look back at GTV events, moments, and memories</p>
 
   <div class="gallery">
-    <img src="https://via.placeholder.com/400x225?text=GTV+Group+Photo+1" alt="Group Photo 1">
-    <img src="https://via.placeholder.com/400x225?text=GTV+Cooking+Battle" alt="Cooking Battle">
-    <img src="https://via.placeholder.com/400x225?text=GTV+Sunset+Hangout" alt="Sunset Hangout">
-    <img src="https://via.placeholder.com/400x225?text=GTV+Movie+Night" alt="Movie Night">
+    <img src="your-photo-1.jpg" alt="Group Photo 1">
+    <img src="your-photo-2.jpg" alt="Event Hangout">
+    <img src="your-photo-3.jpg" alt="Cooking Challenge">
+    <!-- Add more image entries as needed -->
   </div>
 
-  <a href="index.html" class="back-button">← Back to Home</a>
+  <a class="back-button" href="index.html">← Back to Home</a>
 </body>
 </html>
