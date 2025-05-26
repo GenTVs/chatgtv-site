@@ -1,0 +1,28 @@
+<!-- Sample HTML Snippet With Responsive Fix -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  /* Add inside each HTML file's <style> block */
+  body {
+    padding: 2rem;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  p, .event-title, .event-status, .button, .link-box {
+    font-size: 4vw;
+  }
+
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    p, .event-title, .event-status, .button, .link-box {
+      font-size: 1.1rem;
+    }
+  }
+</style>
