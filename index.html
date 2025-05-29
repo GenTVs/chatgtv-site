@@ -7,9 +7,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to GTV</title>
+  <title>Welcome to GTV | ChatGTV</title>
+  <link rel="stylesheet" href="styles/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
-  <style>
+</head>
     * {
       margin: 0;
       padding: 0;
@@ -142,32 +143,39 @@
   </style>
 </head>
 <body>
-  <!-- ========== NAVBAR SECTION ========== -->
-  <header>
-    <div class="logo">[Put Logo Here]</div>
-    <nav>
-      <ul>
-        <li>About
-          <ul>
-            <li>[Put Submenu Here]</li>
-            <li>[Put Submenu Here]</li>
-          </ul>
-        </li>
-        <li>Community
-          <ul>
-            <li>[Put Submenu Here]</li>
-            <li>[Put Submenu Here]</li>
-          </ul>
-        </li>
-        <li>Support
-          <ul>
-            <li>[Put Submenu Here]</li>
-            <li>[Put Submenu Here]</li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
+<!-- ========== NAVBAR SECTION ========== -->
+<header>
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <div class="logo">[Put Logo Here]</div>
+      <nav>
+        <ul class="menu">
+          <li>About
+            <ul class="submenu">
+              <li>[Put Submenu Here]</li>
+              <li>[Put Submenu Here]</li>
+            </ul>
+          </li>
+          <li>Community
+            <ul class="submenu">
+              <li>[Put Submenu Here]</li>
+              <li>[Put Submenu Here]</li>
+            </ul>
+          </li>
+          <li>Support
+            <ul class="submenu">
+              <li>[Put Submenu Here]</li>
+              <li>[Put Submenu Here]</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="navbar-right">
+      <button class="login-disabled">Login</button>
+    </div>
+  </div>
+</header>
 
   <!-- ========== HERO SECTION ========== -->
   <div class="hero">
