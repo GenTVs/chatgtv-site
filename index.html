@@ -1,5 +1,5 @@
 <!-- ========================
-     chatgtv-site code
+     index code
 =========================== -->
 
 <!DOCTYPE html>
@@ -7,76 +7,192 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to GTV | ChatGTV</title>
+  <title>Welcome to GTV</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(145deg, #0d1117, #1f2937);
       color: white;
+      background-color: #0d1117;
+    }
+
+    /* ================= NAVBAR SECTION ================= */
+    header {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
+      padding: 20px 40px;
+      background-color: #0d1117;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
     }
     .logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 2px solid #00e0ff;
-      background-color: rgba(0,224,255,0.1);
+      width: 120px; /* [Put Logo Here] */
+      height: auto;
+      background-color: gray;
+      text-align: center;
+      padding: 10px;
     }
-    h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    p {
-      font-size: 1.25rem;
-      margin: 10px 0 30px;
-      max-width: 500px;
-    }
-    .buttons {
+    nav ul {
+      list-style: none;
       display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
+      gap: 30px;
     }
-    .button {
-      padding: 12px 24px;
+    nav ul li {
+      position: relative;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      background: #1f2937;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    nav ul li ul li {
+      padding: 5px 10px;
+    }
+
+    /* ================= HERO SECTION ================= */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: black;
+      color: white;
+      padding: 0 20px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #1f1f1f url('[Put Video or Background Image Here]') no-repeat center center/cover;
+      opacity: 0.3;
+      z-index: -1;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+    }
+    .hero .button {
+      padding: 14px 28px;
       background: #00e0ff;
-      color: #000;
-      border: none;
-      border-radius: 8px;
+      color: black;
       font-weight: bold;
       text-decoration: none;
-      transition: background 0.2s;
+      border-radius: 8px;
     }
-    .button:hover {
-      background: #00b2cc;
+
+    /* ================= DOWNLOAD BUTTONS ================= */
+    .download-buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .download-buttons .button {
+      background: gray;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: default;
+    }
+
+    /* ================= FOOTER SECTION ================= */
+    footer {
+      background-color: #111;
+      padding: 40px 20px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .socials {
+      margin: 15px 0;
+    }
+    .socials span {
+      margin: 0 10px;
+      color: #888;
+    }
+    .login-placeholder {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 14px;
+      background-color: #333;
+      color: #888;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-  <img src="ChatGTV Icon.png" alt="ChatGTV Icon" class="logo">
-  <h1>Welcome to GTV</h1>
-  <p>Home of ChatGTV — your AI companion powered by OpenAI, now available on Discord. Ask questions, run events, and enjoy intelligent conversations.</p>
-  <div class="buttons">
-    <a href="https://www.youtube.com/@gtv-noob" class="button">Watch Youtube</a>
-    <a href="https://discord.gg/MnuzHBgRuF" class="button">Join Discord</a>
-    <a href="https://www.twitch.tv/gtv_vrc" class="button">Live Twitch</a>
-    <a href="https://vrchat.com/home/world/wrld_f05f3b59-ffa9-4114-9ae0-ffbc27b62ff6/info" class="button">Explore VRChat</a>
-    <a href="main.html" class="button">📂 Full Menu</a>
+  <!-- ========== NAVBAR SECTION ========== -->
+  <header>
+    <div class="logo">[Put Logo Here]</div>
+    <nav>
+      <ul>
+        <li>About
+          <ul>
+            <li>[Put Submenu Here]</li>
+            <li>[Put Submenu Here]</li>
+          </ul>
+        </li>
+        <li>Community
+          <ul>
+            <li>[Put Submenu Here]</li>
+            <li>[Put Submenu Here]</li>
+          </ul>
+        </li>
+        <li>Support
+          <ul>
+            <li>[Put Submenu Here]</li>
+            <li>[Put Submenu Here]</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <div class="hero">
+    <h1>[Put Title Text Here]</h1>
+    <p>[Optional Minimal Text or Slogan]</p>
+    <a href="#" class="button">Jump in now!</a>
+    <div class="download-buttons">
+      <div class="button">Steam (Coming Soon)</div>
+      <div class="button">Meta Quest (Coming Soon)</div>
+      <div class="button">Google Play (Coming Soon)</div>
+    </div>
   </div>
 
-<p>
-  <a href="inkop100.html" style="color:#00e0ff; text-decoration: underline;">
-    📜 Read the InKop100 Tribute
-  </a>
-</p>
+  <!-- ========== FOOTER SECTION ========== -->
+  <footer>
+    <div class="socials">
+      <span>Twitter</span>
+      <span>Discord</span>
+      <span>YouTube</span>
+    </div>
+    <div class="login-placeholder">Login (Disabled)</div>
+    <div style="margin-top: 10px; color: #666;">
+      [Future Bottom Links Here]
+    </div>
+    <p style="margin-top: 20px; color: #555;">&copy; 2025 GTV. All rights reserved.</p>
+  </footer>
 </body>
 </html>
