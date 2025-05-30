@@ -1,44 +1,230 @@
 <!-- ========================
-     About Us - ChatGTV
+     about.html - GTV Community
 =========================== -->
-<section id="about" style="padding: 80px 20px; background: linear-gradient(180deg, #0d1117, #1f2937); color: white; text-align: center;">
-  <div style="max-width: 900px; margin: 0 auto;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">About GTV</h2>
-    <p style="font-size: 1.2rem; line-height: 1.6;">
-      Hi, I’m <strong>GenTVs</strong>! I’m the founder and owner of the <strong>"GTV"</strong> community on VRChat.
-      <br /><br />
-      Welcome to GTV, a growing community inspired by the greatness of others — not to copy, but to <strong>learn</strong>, <strong>grow</strong>, and <strong>become something better</strong> in our own unique way.
-    </p>
 
-    <div style="margin-top: 30px; background-color: #1e2a3a; border-radius: 12px; padding: 30px;">
-      <h3 style="margin-bottom: 15px;">📜 Our Values</h3>
-      <ul style="list-style: none; padding: 0; font-size: 1rem;">
-        <li>🔞 18+ Community</li>
-        <li>💬 No severe profanity</li>
-        <li>🚫 No insults, slurs, or sexual content</li>
-      </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About GTV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #0d1117, #1f2937);
+      color: white;
+    }
+
+    /* ========== NAVBAR SECTION ========== */
+    header {
+      background-color: #0d1117;
+      padding: 10px 30px;
+      position: relative;
+      z-index: 2;
+    }
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .menu > li {
+      position: relative;
+      cursor: pointer;
+      padding: 10px 15px;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #1f2937;
+      padding: 10px;
+      border-radius: 5px;
+      min-width: 150px;
+    }
+    .menu > li:hover .submenu { display: block; }
+    .submenu li a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      padding: 5px 0;
+    }
+    .submenu li a:hover { color: #00e0ff; }
+    .logo {
+      font-weight: bold;
+      background: #555;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .navbar-right .login-disabled {
+      background-color: #3a3a3a;
+      color: #aaa;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      cursor: not-allowed;
+    }
+
+    /* ========== MAIN CONTENT ========== */
+    main {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #00e0ff;
+    }
+    .highlight-bar {
+      margin: 40px auto;
+      padding: 30px;
+      background: #1e2a3a;
+      border-radius: 16px;
+      max-width: 900px;
+    }
+    .highlight-bar h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .highlight-bar p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* ========== GALLERY ========== */
+    .gallery-placeholder {
+      border: 2px dashed #444;
+      border-radius: 12px;
+      padding: 60px;
+      margin: 40px auto;
+      max-width: 800px;
+      color: #aaa;
+    }
+
+    /* ========== QUOTE ========== */
+    .quote {
+      font-style: italic;
+      margin: 60px auto;
+      max-width: 700px;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    /* ========== FOOTER SECTION ========== */
+    footer {
+      background-color: #111;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .footer-left a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .footer-left a:hover { color: #00e0ff; }
+  </style>
+</head>
+<body>
+  <!-- ========== NAVBAR HTML ========== -->
+  <header>
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <div class="logo">[Put Logo Here]</div>
+        <nav>
+          <ul class="menu">
+            <li>About
+              <ul class="submenu">
+                <li><a href="inkop100.html">The Founder</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Our Staff</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Press</a></li>
+              </ul>
+            </li>
+            <li>Community
+              <ul class="submenu">
+                <li><a href="events.html">Events</a></li>
+                <li><a href="media_gallery.html">Media Gallery</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">Rules</a></li>
+                <li><a href="#">Guidelines</a></li>
+                <li><a href="#">Avatars</a></li>
+                <li><a href="#">Worlds</a></li>
+                <li><a href="#">Hierarchy</a></li>
+              </ul>
+            </li>
+            <li>Help
+              <ul class="submenu">
+                <li><a href="links.html">More</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="navbar-right">
+        <button class="login-disabled">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO / CORE ========== -->
+  <main>
+    <div class="hero-title">Grow. Shine. Connect.</div>
+
+    <div class="highlight-bar">
+      <h2>What is GTV?</h2>
+      <p>GTV is a VRChat-based community designed for connection and creativity. We build, we vibe, and we grow — together.</p>
     </div>
 
-    <p style="margin-top: 30px; font-size: 1.1rem;">
-      Our group is built around shared interests and fun projects like <em>Audience Anarchy</em>, <em>Sunset Bar</em>, and more to come.
-      Whether you love VRChat events, digital creativity, or just want a space to chill with good-hearted people —
-      you’re welcome here. ✨
-    </p>
+    <div class="gallery-placeholder">[ Insert Showcase Photos & Videos Here Soon! 🎥📸 ]</div>
 
-    <p style="margin-top: 30px; font-style: italic;">
-      Behind the scenes, we’re also building a <strong>friendly, family-like environment</strong> with <strong>Christian values</strong> —
-      but in public spaces, <strong>everyone is welcome</strong>, no matter your background or beliefs.
-      Respect and kindness come first. 🙏
-    </p>
+    <div class="quote">
+      "When you chase a bee, it flees. But when you farm flowers, it attracts the bees. Stop chasing people — be attractive, and they will come to you."
+      <br><br>— Inspired by Nahida, Goddess of Wisdom
+    </div>
+  </main>
 
-    <p style="margin-top: 30px;">
-      We also host a <strong>Discord server</strong> where we share updates, host events, and stay connected.
-      Come join us and be a part of what we’re building! 🌐
-    </p>
-
-    <blockquote style="margin-top: 40px; font-style: italic; color: #ccc;">
-      "You are my friends if you do what I command. This is my command: Love each other."<br />
-      <strong>— John 15:14 & 15:17</strong>
-    </blockquote>
-  </div>
-</section>
+  <!-- ========== FOOTER HTML ========== -->
+  <footer>
+    <div class="footer-left">
+      <a href="#">Twitter</a>
+      <a href="#">Discord</a>
+      <a href="#">YouTube</a>
+    </div>
+    <div class="footer-center">
+      <!-- Reserved for future bottom links -->
+    </div>
+    <div class="footer-right">
+      &copy; 2025 GTV. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
