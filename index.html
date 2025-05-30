@@ -78,6 +78,15 @@ header {
   color: #ccc;
 }
 
+.submenu li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  color: #00e0ff;
+}
+
 .logo {
   font-weight: bold;
   background: #555;
@@ -95,19 +104,20 @@ header {
   cursor: not-allowed;
 }
 
-    /* ================= HERO SECTION ================= */
-    .hero {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 0 20px;
-      z-index: 1;
-    }
+/* ================= HERO SECTION ================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  z-index: 1;
+}
+
 .hero video {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -115,48 +125,53 @@ header {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  opacity: 0.5; /* optional: for dark overlay effect */
+  opacity: 0.5;
 }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      opacity: 0.3;
-      z-index: -1;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      margin-bottom: 2rem;
-      font-size: 1.2rem;
-    }
-    .hero .button {
-      padding: 14px 28px;
-      background: #00e0ff;
-      color: black;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-    }
 
-    /* ================= DOWNLOAD BUTTONS ================= */
-    .download-buttons {
-      margin-top: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-    .download-buttons .button {
-      background: gray;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      cursor: default;
-    }
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.hero .button {
+  padding: 14px 28px;
+  background: #00e0ff;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* ================= DOWNLOAD BUTTONS ================= */
+.download-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.download-buttons .button {
+  background: gray;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: default;
+}
 
 /* ========== FOOTER SECTION ========== */
 footer {
@@ -201,20 +216,30 @@ footer {
         <ul class="menu">
           <li>About
             <ul class="submenu">
-              <li>[Put Submenu Here]</li>
-              <li>[Put Submenu Here]</li>
+              <li><a href="inkop100.html">The Founder</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="team.html">Our Staff</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Press</a></li>
             </ul>
           </li>
           <li>Community
             <ul class="submenu">
-              <li>[Put Submenu Here]</li>
-              <li>[Put Submenu Here]</li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="media_gallery.html">Media Gallery</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="#">Rules</a></li>
+              <li><a href="#">Guidelines</a></li>
+              <li><a href="#">Avatars</a></li>
+              <li><a href="#">Worlds</a></li>
+              <li><a href="#">Hierarchy</a></li>
             </ul>
           </li>
-          <li>Support
+          <li>Help
             <ul class="submenu">
-              <li>[Put Submenu Here]</li>
-              <li>[Put Submenu Here]</li>
+              <li><a href="links.html">More</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
             </ul>
           </li>
         </ul>
@@ -232,7 +257,7 @@ footer {
 
   <h1>[Put Title Text Here]</h1>
   <p>[Optional Minimal Text or Slogan]</p>
-  <a href="#" class="button">Jump in now!</a>
+  <a href="main.html" class="button">Jump in now!</a>
   <div class="download-buttons">
     <div class="button">Steam (Coming Soon)</div>
     <div class="button">Meta Quest (Coming Soon)</div>
