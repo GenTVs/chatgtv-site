@@ -203,6 +203,16 @@ footer {
 .footer-left a:hover {
   color: #00e0ff;
 }
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.footer-icon:hover {
+  transform: scale(1.2);
+}
 </style>
 </head>
 <body>
@@ -267,11 +277,11 @@ footer {
 
 <!-- ========== FOOTER SECTION ========== -->
 <footer>
-  <div class="footer-left">
-    <a href="#">Twitter</a>
-    <a href="#">Discord</a>
-    <a href="#">YouTube</a>
-  </div>
+<div class="footer-left">
+  <a href="https://www.twitch.tv/gtv_vrc" target="_blank"><img src="twitch_icon.png" alt="Twitch" class="footer-icon"></a>
+  <a href="https://discord.gg/MnuzHBgRuF" target="_blank"><img src="discord_icon.png" alt="Discord" class="footer-icon"></a>
+  <a href="https://www.youtube.com/@gtv-noob" target="_blank"><img src="youtube_icon.png" alt="YouTube" class="footer-icon"></a>
+</div>
   <div class="footer-center">
     <!-- Reserved for future bottom links -->
   </div>
