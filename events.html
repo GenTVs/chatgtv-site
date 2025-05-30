@@ -6,78 +6,267 @@
   <title>Events | GTV</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
       background: linear-gradient(145deg, #0f172a, #1e293b);
       color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ========== NAVBAR SECTION ========== */
+    header {
+      background-color: #0d1117;
+      padding: 10px 30px;
+      position: relative;
+      z-index: 2;
+    }
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .menu > li {
+      position: relative;
+      cursor: pointer;
+      padding: 10px 15px;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #1f2937;
+      padding: 10px;
+      list-style: none;
+      border-radius: 5px;
+      min-width: 150px;
+      z-index: 10;
+    }
+    .menu > li:hover .submenu {
+      display: block;
+    }
+    .submenu li {
+      padding: 5px 10px;
+    }
+    .submenu li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    .submenu li a:hover {
+      color: #00e0ff;
+    }
+    .logo {
+      font-weight: bold;
+      background: #555;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .navbar-right .login-disabled {
+      background-color: #3a3a3a;
+      color: #aaa;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      cursor: not-allowed;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero {
+      padding: 80px 20px 40px;
       text-align: center;
-      min-height: 100vh;
-      padding: 2rem;
     }
-    h1 {
+    .hero h1 {
       font-size: 3rem;
-      margin-bottom: 0.5rem;
     }
-    p.subtitle {
+    .hero p {
       font-size: 1.2rem;
       color: #94a3b8;
-      margin-bottom: 2rem;
+      margin-top: 0.5rem;
     }
-    .event-box {
-      border: 2px solid #38bdf8;
+
+    /* ========== EVENT CARDS ========== */
+    .events {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto 100px;
+    }
+    .event-card {
+      display: flex;
+      flex-wrap: wrap;
       background-color: #1e293b;
-      margin: 1rem auto;
-      max-width: 600px;
-      padding: 1.5rem;
+      border: 2px solid #38bdf8;
       border-radius: 12px;
+      overflow: hidden;
     }
-    .event-title {
-      font-size: 1.5rem;
-      font-weight: 700;
+    .event-content {
+      flex: 1;
+      padding: 30px;
+    }
+    .event-content h2 {
+      font-size: 1.8rem;
       color: #38bdf8;
     }
-    .event-status {
-      color: #facc15;
-      font-weight: 600;
+    .event-content p {
+      margin-top: 10px;
       font-size: 1rem;
-      margin-top: 0.25rem;
+      color: #f1f5f9;
     }
-    .back-button {
-      margin-top: 3rem;
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #38bdf8;
-      color: #000;
-      border-radius: 6px;
+    .event-date {
+      font-weight: bold;
+      color: #facc15;
+      margin-top: 1rem;
+    }
+    .event-image {
+      flex: 1;
+      min-height: 250px;
+      background: #0ea5e9;
+      background-image: url('event_placeholder.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ========== FOOTER SECTION ========== */
+    footer {
+      background-color: #111;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .footer-left a {
+      color: #ccc;
       text-decoration: none;
       font-weight: bold;
     }
-    .back-button:hover {
-      background-color: #0ea5e9;
+    .footer-left a:hover {
+      color: #00e0ff;
     }
   </style>
 </head>
 <body>
+
+<!-- ========== NAVBAR ========== -->
+<header>
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <div class="logo">[Put Logo Here]</div>
+      <nav>
+        <ul class="menu">
+          <li>About
+            <ul class="submenu">
+              <li><a href="inkop100.html">The Founder</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="team.html">Our Staff</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </li>
+          <li>Community
+            <ul class="submenu">
+              <li><a href="events.html">Events</a></li>
+              <li><a href="media_gallery.html">Media Gallery</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="#">Rules</a></li>
+              <li><a href="#">Guidelines</a></li>
+              <li><a href="#">Avatars</a></li>
+              <li><a href="#">Worlds</a></li>
+              <li><a href="#">Hierarchy</a></li>
+            </ul>
+          </li>
+          <li>Help
+            <ul class="submenu">
+              <li><a href="links.html">More</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="navbar-right">
+      <button class="login-disabled">Login</button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="hero">
   <h1>🎉 GTV Events</h1>
-  <p class="subtitle">Explore upcoming events, livestreams, hangouts, and more!</p>
+  <p>Discover what's happening this week and beyond</p>
+</section>
 
-  <div class="event-box">
-    <div class="event-title">VRChat Group Photo</div>
-    <div class="event-status">📸 Coming Soon</div>
+<!-- ========== EVENTS LIST ========== -->
+<section class="events">
+  <div class="event-card">
+    <div class="event-content">
+      <h2>📺 Live Stream: Website & ChatGTV Q&A</h2>
+      <p>Join our very first official GTV livestream as we unveil the new website and ChatGTV Discord AI!</p>
+      <p class="event-date">🗓 Saturday, 31 May – 9 PM or 11 PM CEST</p>
+      <p>🗺 Location: Discord & VRChat Group World</p>
+    </div>
+    <div class="event-image"></div>
   </div>
 
-  <div class="event-box">
-    <div class="event-title">GTV Game Night</div>
-    <div class="event-status">🎮 Not Scheduled Yet</div>
+  <div class="event-card">
+    <div class="event-content">
+      <h2>📸 VRChat Group Photo</h2>
+      <p>We're gathering everyone for a huge group photo to celebrate our launch!</p>
+      <p class="event-date">📆 Coming Soon</p>
+    </div>
+    <div class="event-image"></div>
   </div>
 
-  <div class="event-box">
-    <div class="event-title">Sunset Bar Cooking Stream</div>
-    <div class="event-status">🍳 TBD (To Be Decided)</div>
+  <div class="event-card">
+    <div class="event-content">
+      <h2>🎮 GTV Game Night</h2>
+      <p>Play games, chat with members, and hang out together!</p>
+      <p class="event-date">📆 Not Scheduled Yet</p>
+    </div>
+    <div class="event-image"></div>
   </div>
+</section>
 
-  <a class="back-button" href="index.html">← Back to Home</a>
+<!-- ========== FOOTER SECTION ========== -->
+<footer>
+  <div class="footer-left">
+    <a href="#">Twitter</a>
+    <a href="#">Discord</a>
+    <a href="#">YouTube</a>
+  </div>
+  <div class="footer-center"></div>
+  <div class="footer-right">
+    &copy; 2025 GTV. All rights reserved.
+  </div>
+</footer>
+
 </body>
 </html>
