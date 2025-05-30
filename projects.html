@@ -48,52 +48,193 @@
       font-size: 0.95rem;
       color: #ccc;
     }
-    .coming-soon {
-      opacity: 0.5;
-      font-style: italic;
-    }
     .footer-note {
       margin-top: 3rem;
       color: #999;
       font-size: 0.9rem;
     }
+    footer {
+      background-color: #111;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #ccc;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .footer-icon {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.2s ease;
+    }
+    .footer-icon:hover {
+      transform: scale(1.2);
+    }
+    .logo a {
+      font-weight: bold;
+      background: #555;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    header {
+      background-color: #0d1117;
+      padding: 10px 30px;
+      position: relative;
+      z-index: 2;
+    }
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    .menu > li {
+      position: relative;
+      cursor: pointer;
+      padding: 10px 15px;
+      background-color: transparent;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #1f2937;
+      padding: 10px;
+      list-style: none;
+      border-radius: 5px;
+      z-index: 10;
+      min-width: 150px;
+    }
+    .menu > li:hover .submenu {
+      display: block;
+    }
+    .submenu li {
+      padding: 5px 10px;
+      color: #ccc;
+    }
+    .submenu li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    .submenu li a:hover {
+      color: #00e0ff;
+    }
+    .navbar-right .login-disabled {
+      background-color: #3a3a3a;
+      color: #aaa;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      cursor: not-allowed;
+    }
   </style>
 </head>
 <body>
-  <h1>GTV Projects</h1>
-  <p class="description">
-    Our community thrives on creativity and collaboration! Here are some of the exciting projects we’ve worked on — and what’s coming next.
-  </p>
 
-  <div class="projects-grid">
-    <div class="project-card">
-      <h2>Audience Anarchy</h2>
-      <p class="coming-soon">Coming soon: A chaotic crowd-controlled event experience like no other!</p>
+<header>
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <div class="logo"><a href="https://chatgtv.io">[Put Logo Here]</a></div>
+      <nav>
+        <ul class="menu">
+          <li>About
+            <ul class="submenu">
+              <li><a href="inkop100.html">The Founder</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="team.html">Our Staff</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </li>
+          <li>Community
+            <ul class="submenu">
+              <li><a href="events.html">Events</a></li>
+              <li><a href="media_gallery.html">Media Gallery</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="#">Rules</a></li>
+              <li><a href="#">Guidelines</a></li>
+              <li><a href="#">Avatars</a></li>
+              <li><a href="#">Worlds</a></li>
+              <li><a href="#">Hierarchy</a></li>
+            </ul>
+          </li>
+          <li>Help
+            <ul class="submenu">
+              <li><a href="links.html">More</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </div>
-
-    <div class="project-card">
-      <h2>Sunset Bar</h2>
-      <p>Our cozy hangout world built for bonding, laughter, and live entertainment. Inspired by nightlife and bunny ears — VR-style!</p>
-    </div>
-
-    <div class="project-card">
-      <h2>Cooking Battle 3.0</h2>
-      <p class="coming-soon">Currently in planning. Bring your apron... and chaos! 🍳🔥</p>
-    </div>
-
-    <div class="project-card">
-      <h2>Custom Avatar Launch</h2>
-      <p class="coming-soon">More stylish, expressive, and built just for our GTV world. In progress!</p>
-    </div>
-
-    <div class="project-card">
-      <h2>Photo Gallery</h2>
-      <p>Coming soon: A collection of past GTV event memories and community snapshots.</p>
+    <div class="navbar-right">
+      <button class="login-disabled">Login</button>
     </div>
   </div>
+</header>
 
-  <p class="footer-note">
-    ⚠️ Many projects are still under construction or paused during video production. Check back soon for new reveals!
-  </p>
+<h1>GTV Projects</h1>
+<p class="description">
+  Our community thrives on creativity! Here are some of the exciting projects we’ve worked on — and what’s coming next.
+</p>
+
+<div class="projects-grid">
+  <div class="project-card">
+    <h2>The Story Written by Hope</h2>
+    <p>A Journey Through 2024–2025. A Video Project.</p>
+    <p style="font-size: 0.8rem; color: #888;">created by GenTVs</p>
+  </div>
+
+  <div class="project-card">
+    <h2>Next Project</h2>
+    <p class="coming-soon">Coming Soon</p>
+  </div>
+</div>
+
+<p class="footer-note">
+  ⚠️ Many Projects are in progress at low speed. The one who responsible for these Projects are The GTV Team. To follow-up, please check our Discord Server announcements. Contact our Admins if you have any question.
+</p>
+
+<footer>
+  <div class="footer-left">
+    <a href="https://www.twitch.tv/gtv_vrc" target="_blank"><img src="twitch_icon.png" alt="Twitch" class="footer-icon"></a>
+    <a href="https://discord.gg/MnuzHBgRuF" target="_blank"><img src="discord_icon.png" alt="Discord" class="footer-icon"></a>
+    <a href="https://www.youtube.com/@gtv-noob" target="_blank"><img src="youtube_icon.png" alt="YouTube" class="footer-icon"></a>
+  </div>
+  <div class="footer-center">
+    <a href="#">Terms of Service</a>
+    <a href="#">Support Us</a>
+  </div>
+  <div class="footer-right">
+    &copy; 2025 GTV. All rights reserved.
+  </div>
+</footer>
+
 </body>
 </html>
