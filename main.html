@@ -1,88 +1,273 @@
+<!-- ========================
+     main code
+=========================== -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GTV Navigation Template</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+  <title>Welcome to GTV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
   <style>
-    body {
+    /* ========== BASE RESET ========== */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(145deg, #0d1117, #1f2937);
+      background-color: #0d1117;
       color: white;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
+
+    /* ========== NAVBAR CSS ========== */
     header {
-      background-color: #1f2937;
-      padding: 1rem;
+      background-color: #0d1117;
+      padding: 10px 30px;
+      position: relative;
+      z-index: 2;
     }
-    nav {
+    .navbar-container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
     }
-    nav a {
-      color: #00e0ff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      background-color: #1e293b;
-      border-radius: 6px;
-      transition: background-color 0.2s;
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
     }
-    nav a:hover {
-      background-color: #00b2cc;
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
     }
-    main {
-      flex: 1;
-      padding: 2rem;
-      text-align: center;
+    .menu > li {
+      position: relative;
+      cursor: pointer;
+      padding: 10px 15px;
+      background-color: transparent;
     }
-    footer {
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
       background-color: #1f2937;
-      text-align: center;
-      padding: 1rem;
-      color: #94a3b8;
+      padding: 10px;
+      list-style: none;
+      border-radius: 5px;
+      z-index: 10;
+      min-width: 150px;
+    }
+    .menu > li:hover .submenu {
+      display: block;
+    }
+    .submenu li {
+      padding: 5px 10px;
+      color: #ccc;
+    }
+    .submenu li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    .submenu li a:hover {
+      color: #00e0ff;
+    }
+    .logo {
+      font-weight: bold;
+      background: #555;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .navbar-right .login-disabled {
+      background-color: #3a3a3a;
+      color: #aaa;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      cursor: not-allowed;
+    }
+
+    /* ========== SECTION CSS ========== */
+    .section {
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #333;
+    }
+
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .section img {
+      max-width: 400px;
+      border-radius: 12px;
+    }
+
+    .section-text {
+      max-width: 600px;
+    }
+
+    .section-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-text p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .cta-button {
+      margin-top: 2rem;
+      padding: 14px 28px;
+      background: #00e0ff;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* ========== FOOTER CSS ========== */
+    footer {
+      background-color: #111;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #ccc;
       font-size: 0.9rem;
     }
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      h1 {
-        font-size: 6vw;
-      }
-      p {
-        font-size: 4vw;
-      }
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .footer-left a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    .footer-left a:hover {
+      color: #00e0ff;
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="team.html">Team</a>
-      <a href="projects.html">Projects</a>
-      <a href="events.html">Events</a>
-      <a href="media_gallery.html">Gallery</a>
-      <a href="links.html">Links</a>
-    </nav>
-  </header>
 
-  <main>
-    <h1>🌐 Welcome to GTV</h1>
-    <p>This template includes the site-wide navigation bar and footer.</p>
-  </main>
+<!-- ========== NAVBAR HTML ========== -->
+<header>
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <div class="logo">[Put Logo Here]</div>
+      <nav>
+        <ul class="menu">
+          <li>About
+            <ul class="submenu">
+              <li><a href="inkop100.html">The Founder</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="team.html">Our Staff</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </li>
+          <li>Community
+            <ul class="submenu">
+              <li><a href="events.html">Events</a></li>
+              <li><a href="media_gallery.html">Media Gallery</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="#">Rules</a></li>
+              <li><a href="#">Guidelines</a></li>
+              <li><a href="#">Avatars</a></li>
+              <li><a href="#">Worlds</a></li>
+              <li><a href="#">Hierarchy</a></li>
+            </ul>
+          </li>
+          <li>Help
+            <ul class="submenu">
+              <li><a href="links.html">More</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="navbar-right">
+      <button class="login-disabled">Login</button>
+    </div>
+  </div>
+</header>
 
-  <footer>
-    &copy; 2025 GTV Community | Built with ❤️ by GenTVs
-  </footer>
+<!-- ========== MAIN CONTENT HTML ========== -->
+  <section class="section">
+    <div class="section-text">
+      <h2>Who Are We?</h2>
+      <p>GTV is a VRChat community that brings together passionate explorers, creators, and leaders. We're all about fun, creativity, and respectful friendship.</p>
+    </div>
+    <img src="assets/img/section-who.jpg" alt="Who Are We">
+  </section>
+
+  <section class="section reverse">
+    <div class="section-text">
+      <h2>What Do We Do?</h2>
+      <p>We host events, build worlds, support new users, and offer a space where everyone feels welcomed. Whether you're joining a hangout night or learning Unity, we're with you.</p>
+    </div>
+    <img src="assets/img/section-what.jpg" alt="What We Do">
+  </section>
+
+  <section class="section">
+    <div class="section-text">
+      <h2>Why GTV?</h2>
+      <p>Because we believe in creating a positive, inclusive environment. From our volunteer staff to our uplifting messages, we aim to be a home for VR adventurers.</p>
+    </div>
+    <img src="assets/img/section-why.jpg" alt="Why Join">
+  </section>
+
+  <section class="section reverse">
+    <div class="section-text">
+      <h2>Upcoming Events</h2>
+      <p>Join us weekly for game nights, special VR meetups, seasonal events, and competitions. Want to help host one? Join our team!</p>
+    </div>
+    <img src="assets/img/events.jpg" alt="Events">
+  </section>
+
+  <section class="section">
+    <div class="section-text">
+      <h2>Start Exploring Now</h2>
+      <p>Check out our avatar list, join the group in VRChat, or browse our media gallery to see what we've been up to!</p>
+    </div>
+    <img src="assets/img/join-now.jpg" alt="Join Now">
+  </section>
+
+<!-- ========== FOOTER HTML ========== -->
+<footer>
+  <div class="footer-left">
+    <a href="#">Twitter</a>
+    <a href="#">Discord</a>
+    <a href="#">YouTube</a>
+  </div>
+  <div class="footer-center">
+    <!-- Reserved for future bottom links -->
+  </div>
+  <div class="footer-right">
+    &copy; 2025 GTV. All rights reserved.
+  </div>
+</footer>
+
 </body>
 </html>
