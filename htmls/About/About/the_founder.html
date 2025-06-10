@@ -17,11 +17,21 @@
       box-sizing: border-box;
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #1f1f2e 10%, #0d1117 80%, #1f1f2e 10%);
-      color: white;
-    }
+      body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Inter', sans-serif;
+          background: linear-gradient(to right, #4b0082 0%, /* GTV Color Left */
+          #0d1117 20%, /* Dark Panel Start */
+          #0d1117 80%, /* Dark Panel End */
+          #00e0ff 100% /* GTV Color Right */
+          );
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-attachment: fixed;
+          color: white;
+          min-height: 100vh;
+      }
 
       /* ================= NAVBAR SECTION ================= */
       header {
@@ -219,6 +229,21 @@
       font-size: 1.3rem;
       opacity: 0.85;
     }
+
+      .page-wrapper {
+          display: flex;
+          justify-content: center;
+          min-height: 100vh;
+          width: 100%;
+      }
+
+      .center-panel {
+          width: 60%;
+          background-color: rgba(13, 17, 23, 0.95); /* central dark glass box */
+          padding: 60px 40px;
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+          border-radius: 0;
+      }
 
     /* ========== SECTION ========== */
     .section {
@@ -496,65 +521,68 @@
         <p>The GTV Founder</p>
     </div>
 
-    <!-- ========== SECTION 1: About ========== -->
-    <div class="section">
-        <div class="text">
-            <h2>About InKop100</h2>
-            <h3>by GenTVs</h3>
-            <p>
-                InKop100 was the youngest Best Friend I had back in 2024. He was about to turn 19 that time. He is a German friend who loved playing VRChat and enjoyed hanging out and making friends. That’s how he found me when I first opened a public instance.
-                <br><br>
-                We had so much fun, that he suggested I create our own community. It took me a month to decide on buying VRChat Plus, and eventually I did — for our community. I was thinking of names like "Audience Anarchy" or "Asian American", but then he said, “How about GTV?” — DAMN he’s smart!
-                <br><br>
-                So we made it under my name and he, as Moderator, stood by my side. We reached 500 members in less than a month. It felt incredible. I knew nothing about Discord, so he built a server for me and made our first GTV background art.
-                <br><br>
-                We hosted Audience Anarchy in Europe every day — until one day...
-                <br><br>
-                InKop100 realized VRChat daily life was taking a toll. He left us a final message. I read it, tears flowed. Then I wiped my face like a tough little boy, looked at the sky, and whispered, “Thank you for everything, my brother...”
-            </p>
+    <div class="page-wrapper">
+        <div class="center-panel">
+            <!-- ========== SECTION 1: About ========== -->
+            <div class="section">
+                <div class="text">
+                    <h2>About InKop100</h2>
+                    <h3>by GenTVs</h3>
+                    <p>
+                        InKop100 was the youngest Best Friend I had back in 2024. He was about to turn 19 that time. He is a German friend who loved playing VRChat and enjoyed hanging out and making friends. That’s how he found me when I first opened a public instance.
+                        <br><br>
+                        We had so much fun, that he suggested I create our own community. It took me a month to decide on buying VRChat Plus, and eventually I did — for our community. I was thinking of names like "Audience Anarchy" or "Asian American", but then he said, “How about GTV?” — DAMN he’s smart!
+                        <br><br>
+                        So we made it under my name and he, as Moderator, stood by my side. We reached 500 members in less than a month. It felt incredible. I knew nothing about Discord, so he built a server for me and made our first GTV background art.
+                        <br><br>
+                        We hosted Audience Anarchy in Europe every day — until one day...
+                        <br><br>
+                        InKop100 realized VRChat daily life was taking a toll. He left us a final message. I read it, tears flowed. Then I wiped my face like a tough little boy, looked at the sky, and whispered, “Thank you for everything, my brother...”
+                    </p>
+                </div>
+                <div class="photo">
+                    <img src="inkop_photo1.jpg" alt="InKop100 Art or Portrait" />
+                </div>
+            </div>
+
+            <!-- ========== SECTION 2: Farewell ========== -->
+            <div class="section reverse">
+                <div class="text">
+                    <h2>Farewell...</h2>
+                    <p>
+                        Dear GenTVs, Members and Friends,<br><br>
+
+                        I am InKop100. I wanted to take a moment to reach out to all of you, as I’ve been facing some challenges that have made it difficult for me to stay connected and engaged as much as I'd like. I know each of you brings such wonderful energy, support, and companionship into my life, and I appreciate it more than I can say.
+
+                        <br><br>
+                        However, circumstances have taken a turn where I feel it's best for me to step back and focus on some personal matters. I’m deeply sorry if this comes as a disappointment, but please know this decision hasn’t come easily for me. Each of you has been such a significant part of my journey, and I'm grateful for every shared laugh, every heartfelt conversation, and all the wonderful memories we've created together.
+
+                        <br><br>
+                        This isn’t a permanent goodbye; it’s a see-you-later. I’ll be carrying each of you with me in spirit, and I hope to reconnect someday when the time is right. Until then, please take care of each other, and keep the warmth, laughter, and kindness going strong.
+
+                        <br><br>
+                        Thank you for everything. With all my heart, I wish you all wonderful days.
+                        <br><br>
+                        Yours Truly,<br>
+                        Moderator, Staff Team, InKop100
+                    </p>
+                </div>
+                <div class="photo">
+                    <img src="inkop_photo2.jpg" alt="InKop100 Last Message Art" />
+                </div>
+            </div>
+            <!-- ========== GALLERY + MORE ========== -->
+            <div class="details-toggle">
+                <button onclick="toggleDetails()">Click for More Details</button>
+            </div>
+
+            <div class="extra-details" id="detailsBox">
+                <h2>What is GTV?</h2>
+                <p>
+                    GTV is not just a group — it is a space built on passion, creativity, friendship, and heart. Founded on the belief that everyone deserves to be heard, respected, and welcomed, GTV brings people together through shared events, laughter, support, and personal growth. We honor the past and build toward the future — together.
+                </p>
+            </div>
         </div>
-        <div class="photo">
-            <img src="inkop_photo1.jpg" alt="InKop100 Art or Portrait" />
-        </div>
-    </div>
-
-    <!-- ========== SECTION 2: Farewell ========== -->
-    <div class="section reverse">
-        <div class="text">
-            <h2>Farewell...</h2>
-            <p>
-                Dear GenTVs, Members and Friends,<br><br>
-
-                I am InKop100. I wanted to take a moment to reach out to all of you, as I’ve been facing some challenges that have made it difficult for me to stay connected and engaged as much as I'd like. I know each of you brings such wonderful energy, support, and companionship into my life, and I appreciate it more than I can say.
-
-                <br><br>
-                However, circumstances have taken a turn where I feel it's best for me to step back and focus on some personal matters. I’m deeply sorry if this comes as a disappointment, but please know this decision hasn’t come easily for me. Each of you has been such a significant part of my journey, and I'm grateful for every shared laugh, every heartfelt conversation, and all the wonderful memories we've created together.
-
-                <br><br>
-                This isn’t a permanent goodbye; it’s a see-you-later. I’ll be carrying each of you with me in spirit, and I hope to reconnect someday when the time is right. Until then, please take care of each other, and keep the warmth, laughter, and kindness going strong.
-
-                <br><br>
-                Thank you for everything. With all my heart, I wish you all wonderful days.
-                <br><br>
-                Yours Truly,<br>
-                Moderator, Staff Team, InKop100
-            </p>
-        </div>
-        <div class="photo">
-            <img src="inkop_photo2.jpg" alt="InKop100 Last Message Art" />
-        </div>
-    </div>
-
-    <!-- ========== GALLERY + MORE ========== -->
-    <div class="details-toggle">
-        <button onclick="toggleDetails()">Click for More Details</button>
-    </div>
-
-    <div class="extra-details" id="detailsBox">
-        <h2>What is GTV?</h2>
-        <p>
-            GTV is not just a group — it is a space built on passion, creativity, friendship, and heart. Founded on the belief that everyone deserves to be heard, respected, and welcomed, GTV brings people together through shared events, laughter, support, and personal growth. We honor the past and build toward the future — together.
-        </p>
     </div>
 
     <!-- ========== GALLERY SECTION ========== -->
