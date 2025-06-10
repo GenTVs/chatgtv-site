@@ -352,7 +352,7 @@
                         <img src="photo/gtv_logo.png" alt="GTV Logo" class="logo-img">
                     </a>
                 </div>
-                <nav>
+                <nav id="main-nav">
                     <ul class="menu">
                         <li>
                             <span>About</span>
@@ -360,22 +360,22 @@
                                 <li>
                                     <span>About</span>
                                     <ul class="submenu">
-                                        <li><a href="htmls/About/About/the_founder.html">The Founder</a></li>
-                                        <li><a href="htmls/About/About/about_us.html">About Us</a></li>
+                                        <li><a data-path="htmls/About/About/the_founder.html">The Founder</a></li>
+                                        <li><a data-path="htmls/About/About/about_us.html">About Us</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <span>Hierarchy</span>
                                     <ul class="submenu">
-                                        <li><a href="htmls/About/Hierarchy/ranking_system.html">Ranking System</a></li>
-                                        <li><a href="htmls/About/Hierarchy/staff_team.html">Staff Team</a></li>
+                                        <li><a data-path="htmls/About/Hierarchy/ranking_system.html">Ranking System</a></li>
+                                        <li><a data-path="htmls/About/Hierarchy/staff_team.html">Staff Team</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <span>Info</span>
                                     <ul class="submenu">
-                                        <li><a href="htmls/About/Info/blog.html">Blog</a></li>
-                                        <li><a href="htmls/About/Info/press.html">Press</a></li>
+                                        <li><a data-path="htmls/About/Info/blog.html">Blog</a></li>
+                                        <li><a data-path="htmls/About/Info/press.html">Press</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -387,16 +387,16 @@
                                 <li>
                                     Community
                                     <ul class="submenu">
-                                        <li><a href="htmls/Community/Community/rules.html">Rules</a></li>
-                                        <li><a href="htmls/Community/Community/guidelines.html">Guidelines</a></li>
+                                        <li><a data-path="htmls/Community/Community/rules.html">Rules</a></li>
+                                        <li><a data-path="htmls/Community/Community/guidelines.html">Guidelines</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     Events
                                     <ul class="submenu">
-                                        <li><a href="htmls/Community/Events/schedule.html">Schedule</a></li>
-                                        <li><a href="htmls/Community/Events/projects.html">Projects</a></li>
-                                        <li><a href="htmls/Community/Events/media_gallery.html">Media Gallery</a></li>
+                                        <li><a data-path="htmls/Community/Events/schedule.html">Schedule</a></li>
+                                        <li><a data-path="htmls/Community/Events/projects.html">Projects</a></li>
+                                        <li><a data-path="htmls/Community/Events/media_gallery.html">Media Gallery</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -423,7 +423,7 @@
                                         <li>
                                             Help
                                             <ul class="submenu">
-                                                <li><a href="htmls/Help/Help/Help/help.html" target="_blank">help...? Help! HELP!!!</a></li>
+                                                <li><a data-path="htmls/Help/Help/Help/help.html" target="_blank">help...? Help! HELP!!!</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -431,9 +431,9 @@
                                 <li>
                                     More
                                     <ul class="submenu">
-                                        <li><a href="htmls/Help/More/faqs.html">FAQs</a></li>
-                                        <li><a href="htmls/Help/More/contact_us.html">Contact Us</a></li>
-                                        <li><a href="htmls/Help/More/links.html">Links</a></li>
+                                        <li><a data-path="htmls/Help/More/faqs.html">FAQs</a></li>
+                                        <li><a data-path="htmls/Help/More/contact_us.html">Contact Us</a></li>
+                                        <li><a data-path="htmls/Help/More/links.html">Links</a></li>
                                     </ul>
                                 </li>
                                 <li><span style="color: gray; cursor: not-allowed;">Coming Soon</span></li>
@@ -516,15 +516,6 @@
 
     <!-- ========== JavaScript ========== -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            const isGitHub = location.hostname.endWith('.github.io');
-            const prefix = isGitHub ? '/chatgtv-site/' : '/';
-
-            document.querySelectorAll('a[data-path]').forEach(a => {
-                a.href = prefix + a.dataset.path.replace(/^\/?/, '');
-            });
-        });
         function toggleDetails() {
             const more = document.getElementById('moreDetails');
             more.style.display = (more.style.display === 'none' || more.style.display === '') ? 'block' : 'none';
@@ -540,6 +531,24 @@
         });
 
         document.querySelectorAll('.animated').forEach(el => observer.observe(el));
+
+        function fixLinks(scope = document) {
+            const isGitHub = location.hostname.endsWith('.github.io');
+            const prefix = isGitHub ? '/chatgtv-site/' : '/';
+
+            scope.querySelectorAll('a[data-path]').forEach(a => {
+                a.href = prefix + a.dataset.path.replace(/^\/?/, '');
+            });
+        }
+
+        fetch('/partials/navbar.html')
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+                fixLinks(document.getElementById('navbar-container'));
+            });
+
+        document.addEventListener('DOMContentLoaded', () => fixLinks());
     </script>
 
 </body>

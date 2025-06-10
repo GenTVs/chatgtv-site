@@ -365,7 +365,7 @@
                     <img src="photo/gtv_logo.png" alt="GTV Logo" class="logo-img">
                      </a>
                 </div>
-                <nav>
+                <nav id="main-nav">
                     <ul class="menu">
                         <li>
                             <span>About</span>
@@ -373,8 +373,8 @@
                                 <li>
                                     <span>About</span>
                                     <ul class="submenu">
-                                        <li><a href="htmls/About/About/the_founder.html">The Founder</a></li>
-                                        <li><a href="htmls/About/About/about_us.html">About Us</a></li>
+                                        <li><a data-path="htmls/About/About/the_founder.html">The Founder</a></li>
+                                        <li><a data-path="htmls/About/About/about_us.html">About Us</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -436,7 +436,7 @@
                                         <li>
                                             Help
                                             <ul class="submenu">
-                                                <li><a href="htmls/Help/Help/Help/help.html" target="_blank">help...? Help! HELP!!!</a></li>
+                                                <li><a data-path="htmls/Help/Help/Help/help.html" target="_blank">help...? Help! HELP!!!</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -500,15 +500,6 @@
 
     <!-- ========== JavaScript ========== -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            const isGitHub = location.hostname.endWith('.github.io');
-            const prefix = isGitHub ? '/chatgtv-site/' : '/';
-
-            document.querySelectorAll('a[data-path]').forEach(a => {
-                a.href = prefix + a.dataset.path.replace(/^\/?/, '');
-            });
-        });
         const video = document.getElementById('hero-video');
         const btn = document.getElementById('unmute-btn');
         const videoElement = document.getElementById("hero-video");
@@ -530,6 +521,24 @@
 
         videoElement.addEventListener("ended", playNext);
         playNext();
+
+        function fixLinks(scope = document) {
+            const isGitHub = location.hostname.endsWith('.github.io');
+            const prefix = isGitHub ? '/chatgtv-site/' : '/';
+
+            scope.querySelectorAll('a[data-path]').forEach(a => {
+                a.href = prefix + a.dataset.path.replace(/^\/?/, '');
+            });
+        }
+
+        fetch('/partials/navbar.html')
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+                fixLinks(document.getElementById('navbar-container'));
+            });
+
+        document.addEventListener('DOMContentLoaded', () => fixLinks());
     </script>
 
 </body>
