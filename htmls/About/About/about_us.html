@@ -297,6 +297,134 @@
             color: #ccc;
         }
 
+        /* ================= GROW SECTION ================= */
+        .grow-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 30px;
+            background-color: #0d1117;
+            text-align: center;
+        }
+
+        .grow-top {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+            .grow-top h2 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
+
+        .grow-bottom {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .grow-photo {
+            flex: 1 1 30%;
+            min-width: 200px;
+        }
+
+        .grow-video {
+            flex: 1 1 60%;
+            min-width: 300px;
+        }
+
+            .grow-photo img,
+            .grow-video video {
+                width: 100%;
+                border-radius: 12px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            }
+
+        /* ================= SHINE SECTION ================= */
+        .shine-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 30px;
+            background-color: #0d1117;
+            text-align: center;
+        }
+
+        .shine-top {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .shine-photo {
+            flex: 2 1 60%;
+            min-width: 300px;
+        }
+
+        .shine-video {
+            flex: 1 1 30%;
+            min-width: 200px;
+        }
+
+            .shine-photo img,
+            .shine-video video {
+                width: 100%;
+                border-radius: 12px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            }
+
+        .shine-bottom h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* ================= CONNECT SECTION ================= */
+        .connect-section {
+            display: flex;
+            min-height: 500px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background: #0d1117;
+            clip-path: polygon(0 0, 65% 0, 100% 100%, 0% 100%);
+        }
+
+        .connect-left, .connect-right {
+            flex: 1;
+            padding: 60px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .connect-left {
+            background-color: rgba(13, 17, 23, 0.95);
+            flex-direction: column;
+            text-align: left;
+            z-index: 2;
+        }
+
+            .connect-left h2 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
+
+        .connect-right {
+            z-index: 1;
+            padding: 0;
+            overflow: hidden;
+        }
+
+            .connect-right video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%);
+            }
+
         /* ========== FOOTER SECTION ========== */
         footer {
             background-color: #111;
@@ -454,24 +582,56 @@
     </section>
 
     <!-- ================= GROW SECTION ================= -->
-    <section class="grow">
-        <div class="content-box animated"> <h2>🌱 Grow</h2> <p>We encourage members to learn new things, develop projects, and grow their confidence through collaboration and creativity.</p> </div>
-        <div class="media-box animated"> <img src="placeholder1.jpg" alt="Grow Image" /> </div>
-        <div class="media-box animated"> <video src="placeholder1.mp4" autoplay muted loop></video> </div>
+    <section class="grow-section">
+        <div class="grow-top">
+            <h2>🌱 Grow</h2>
+            <p>
+                We encourage members to learn new things, develop projects,<br />
+                and grow their confidence through collaboration and creativity.
+            </p>
+        </div>
+        <div class="grow-bottom">
+            <div class="grow-photo">
+                <img src="photo/grow.jpg" alt="Grow Image">
+            </div>
+            <div class="grow-video">
+                <video src="video/grow.mp4" autoplay muted loop></video>
+            </div>
+        </div>
     </section>
 
     <!-- ================= SHINE SECTION ================= -->
-    <section class="shine">
-        <div class="media-box animated"> <img src="placeholder2.jpg" alt="Shine Image" /> </div>
-        <div class="content-box animated"> <h2>✨ Shine</h2> <p>We highlight the talents of our members and give them space to shine in events, showcases, and creative sessions.</p> </div>
-        <div class="media-box animated"> <video src="placeholder2.mp4" autoplay muted loop></video> </div>
+    <section class="shine-section">
+        <div class="shine-top">
+            <div class="shine-photo">
+                <img src="photo/shine.jpg" alt="Shine Image">
+            </div>
+            <div class="shine-video">
+                <video src="video/shine.mp4" autoplay muted loop></video>
+            </div>
+        </div>
+        <div class="shine-bottom">
+            <h2>✨ Shine</h2>
+            <p>
+                We highlight the talents of our members and give them space to<br />
+                shine in events, showcases, and creative sessions.
+            </p>
+        </div>
     </section>
 
     <!-- ================= CONNECT SECTION ================= -->
-    <section class="connect">
-        <div class="content-box animated"> <h2>🔗 Connect</h2> <p>We value meaningful connections, whether it's through VRChat hangouts, shared missions, or deep late-night conversations. You're never alone.</p> </div>
-        <div class="media-box animated"> <img src="placeholder3.jpg" alt="Connect Image" /> </div>
-        <div class="media-box animated"> <video src="placeholder3.mp4" autoplay muted loop></video> </div>
+    <section class="connect-section">
+        <div class="connect-left">
+            <h2>🤝 Connect</h2>
+            <p>
+                Building relationships is the heart of GTV.<br />
+                From random hangouts to long-term friendships,<br />
+                our connections are built on respect and trust.
+            </p>
+        </div>
+        <div class="connect-right">
+            <video src="video/connect.mp4" autoplay muted loop></video>
+        </div>
     </section>
 
     <!-- ================= CLICK FOR MORE + GALLERY + QUOTE ================= -->
