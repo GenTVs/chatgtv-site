@@ -8,6 +8,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to GTV</title>
+
+    <!-- 🌐 Open Graph (Discord Preview) -->
+    <meta property="og:title" content="GTV - GenTVs Community Portal" />
+    <meta property="og:description" content="Welcome to GTV — a passionate VRChat community driven by creativity, events, and friendship. Explore our world, join the fun, and meet the team." />
+    <meta property="og:url" content="https://chatgtv.io" />
+    <meta property="og:image" content="https://chatgtv.io/photo/gtv_logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GTV" />
+
+    <!-- 🐤 Twitter Card (optional) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GTV - GenTVs Community Portal" />
+    <meta name="twitter:description" content="Welcome to GTV — a passionate VRChat community driven by creativity, events, and friendship. Explore our world, join the fun, and meet the team." />
+    <meta name="twitter:image" content="https://chatgtv.io/photo/gtv_logo.png" />
+
+    <!-- 🌟 Favicons -->
+    <link rel="icon" type="image/png" href="https://chatgtv.io/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="https://chatgtv.io/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://chatgtv.io/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://chatgtv.io/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ChatGTV" />
+    <link rel="manifest" href="https://chatgtv.io/favicon/site.webmanifest" />
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
     <style>
         /* ========== BASE RESET ========== */
@@ -66,9 +89,9 @@
                 cursor: default;
             }
 
-            .menu > li:hover {
-                background-color: #d3c1af;
-            }
+                .menu > li:hover {
+                    background-color: #d3c1af;
+                }
 
         .submenu {
             display: none;
@@ -148,7 +171,7 @@
             animation: bounceLoop 0.6s ease-in-out infinite;
             transition: filter 0.3s ease;
         }
-        
+
         @keyframes bounce {
             0%, 100% {
                 transform: scale(1);
@@ -182,11 +205,9 @@
                 transform: translateY(-8px);
             }
         }
-        
+
         .logo-img:hover {
-            animation:
-                bounce 0.4s ease forwards,
-                wiggle 0.5s ease-in-out infinite 0.4s;
+            animation: bounce 0.4s ease forwards, wiggle 0.5s ease-in-out infinite 0.4s;
             filter: drop-shadow(0 0 8px #eb752d);
         }
 
@@ -259,40 +280,43 @@
                 border-radius: 8px;
             }
 
-            .hero-overlay {
-                position: absolute;
-                top: 50%; left: 50%;
-                transform: translate(-50%, -50%);
-                width: min(90%, 800px);
-                height: min(60%, 400px);
-                padding: 40px 60px;
-                background: rgba(0, 0, 0, 0.35);
-                border-radius: 16px;
-                backdrop-filter: blur(4px);
-                pointer-events: none;
-            }
+        .hero-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: min(90%, 800px);
+            height: min(60%, 400px);
+            padding: 40px 60px;
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 16px;
+            backdrop-filter: blur(4px);
+            pointer-events: none;
+        }
 
-            .hero-content {
-                position: absolute;
-                top: 50%; left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 2;
-                text-align: center;
-                color: #fff;
-            }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+        }
 
-            #unmute-btn {
-                position: absolute;
-                bottom: 20px; right: 20px;
-                z-index: 3;
-                background: rgba(0, 0, 0, 0.4);
-                border: none;
-                padding: 10px 14px;
-                border-radius: 50%;
-                font-size: 1.25rem;
-                cursor: pointer;
-                color: #fff;
-            }
+        #unmute-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 3;
+            background: rgba(0, 0, 0, 0.4);
+            border: none;
+            padding: 10px 14px;
+            border-radius: 50%;
+            font-size: 1.25rem;
+            cursor: pointer;
+            color: #fff;
+        }
 
         /* ================= DOWNLOAD BUTTONS ================= */
         .download-buttons {
