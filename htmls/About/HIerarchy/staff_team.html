@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Staff Team – GTV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #0d1117, #1f2937);
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #0d1117;
+      padding: 10px 30px;
+      z-index: 2;
+    }
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .menu > li {
+      position: relative;
+      cursor: pointer;
+      padding: 10px 15px;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #1f2937;
+      padding: 10px;
+      list-style: none;
+      border-radius: 5px;
+    }
+    .menu > li:hover .submenu {
+      display: block;
+    }
+    .submenu li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    .submenu li a:hover {
+      color: #00e0ff;
+    }
+    .logo a {
+      font-weight: bold;
+      background: #555;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .navbar-right .login-disabled {
+      background-color: #3a3a3a;
+      color: #aaa;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      cursor: not-allowed;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      color: #00e0ff;
+      animation: fadeInDown 1.5s ease-out;
+    }
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2.5rem;
+      color: #00e0ff;
+      margin-bottom: 2rem;
+    }
+    .team-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+    .member-box {
+      background-color: #1e293b;
+      width: 250px;
+      height: 375px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 224, 255, 0.25);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .member-box img {
+      width: 100%;
+      height: 33%;
+      object-fit: cover;
+    }
+    .member-box-content {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .member-box-content h3 {
+      color: #00e0ff;
+      font-size: 1.2rem;
+      margin: 0.2rem 0;
+    }
+    .member-box-content p {
+      margin: 0.3rem 0;
+      font-size: 0.9rem;
+    }
+    .member-box-content a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+    footer {
+      background-color: #111;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .footer-icon {
+      width: 24px;
+      height: 24px;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <div class="logo"><a href="https://chatgtv.io">[Put Logo Here]</a></div>
+        <nav>
+          <ul class="menu">
+            <li>About
+              <ul class="submenu">
+                <li><a href="inkop100.html">The Founder</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Our Staff</a></li>
+              </ul>
+            </li>
+            <li>Community
+              <ul class="submenu">
+                <li><a href="events.html">Events</a></li>
+                <li><a href="media_gallery.html">Media Gallery</a></li>
+                <li><a href="projects.html">Projects</a></li>
+              </ul>
+            </li>
+            <li>Help
+              <ul class="submenu">
+                <li><a href="links.html">More</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="navbar-right">
+        <button class="login-disabled">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Meet the Staff Team</h1>
+  </div>
+
+  <!-- ===== GROUP: Admin Team ===== -->
+  <div class="section">
+    <h2>Admin Team</h2>
+    <div class="team-container">
+      <div class="member-box">
+        <img src="" alt="Siso">
+        <div class="member-box-content">
+          <h3>Siso</h3>
+          <p>VRChat: <a href="https://vrchat.com/home/user/usr_537d2188-4492-45d5-9700-5b8be3b89ef9" target="_blank">Siso6969</a></p>
+        </div>
+      </div>
+      <div class="member-box">
+        <img src="" alt="Negi">
+        <div class="member-box-content">
+          <h3>Negi</h3>
+          <p>VRChat: <a href="https://vrchat.com/home/user/usr_add718a9-4dd9-4356-baf7-d48ea7f395fb" target="_blank">～紫ねぎ～</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== GROUP: Moderators ===== -->
+  <div class="section">
+    <h2>Moderator Team</h2>
+    <div class="team-container">
+      <div class="member-box">
+        <img src="" alt="JustinCastro">
+        <div class="member-box-content">
+          <h3>JustinCastro</h3>
+          <p>VRChat: <a href="https://vrchat.com/home/user/usr_242b3c59-2d00-4a2c-b840-9479bcfa3d94" target="_blank">justincastro517</a></p>
+        </div>
+      </div>
+      <div class="member-box">
+        <img src="" alt="Stamtron">
+        <div class="member-box-content">
+          <h3>Stamtron</h3>
+          <p>VRChat: <a href="https://vrchat.com/home/user/usr_c30cd662-bcc3-46db-9c14-57b075364568" target="_blank">Stamtron23</a></p>
+        </div>
+      </div>
+      <div class="member-box">
+        <img src="" alt="BrokenPerson">
+        <div class="member-box-content">
+          <h3>BrokenPerson</h3>
+          <p>VRChat: <a href="https://vrchat.com/home/user/usr_c8389e8c-487f-4b05-a9bf-9cb87ffb5652" target="_blank">Br0kenPers0n21</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === CONTINUED MODERATOR SECTION === -->
+  <div class="section">
+    <div class="team-container">
+      <div class="member-box">
+        <img src="" alt="Ghostib">
+        <div class="member-box-content">
+          <h3>Ghostib</h3>
+          <p>VRChat: <a href="https://vrchat.com/home/user/usr_b33b9e4f-f55b-445f-b3c6-f4a91d798fce" target="_blank">Ghostib</a></p>
+        </div>
+      </div>
+      <div class="member-box">
+        <img src="" alt="Feral Stella">
+        <div class="member-box-content">
+          <h3>Feral Stella</h3>
+          <p>VRChat: <a href="https://vrchat.com/home/user/usr_00c9c0e3-9a3b-4213-b17b-dadfac90905b" target="_blank">Feral Stella</a></p>
+        </div>
+      </div>
+      <div class="member-box">
+        <img src="" alt="Kytezia">
+        <div class="member-box-content">
+          <h3>Kytezia</h3>
+          <p>VRChat: <a href="https://vrchat.com/home/user/usr_0f041bda-5551-4e7e-be02-3d0d4b39ee6a" target="_blank">kytezia</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <a href="https://www.twitch.tv/gtv_vrc" target="_blank"><img src="twitch_icon.png" alt="Twitch" class="footer-icon"></a>
+      <a href="https://discord.gg/MnuzHBgRuF" target="_blank"><img src="discord_icon.png" alt="Discord" class="footer-icon"></a>
+      <a href="https://www.youtube.com/@gtv-noob" target="_blank"><img src="youtube_icon.png" alt="YouTube" class="footer-icon"></a>
+    </div>
+    <div class="footer-center">
+      <a href="#">Terms of Service</a>
+      <a href="#">Support Us</a>
+    </div>
+    <div class="footer-right">
+      &copy; 2025 GTV. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
