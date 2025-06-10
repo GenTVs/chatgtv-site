@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTV Terms of Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0d1117;
+      color: white;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0d1117;
+      padding: 10px 30px;
+    }
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar-left { display: flex; align-items: center; gap: 30px; }
+    .menu { list-style: none; display: flex; gap: 20px; }
+    .menu > li { position: relative; cursor: pointer; padding: 10px 15px; }
+    .submenu { display: none; position: absolute; top: 100%; left: 0; background-color: #1f2937; padding: 10px; list-style: none; border-radius: 5px; min-width: 150px; }
+    .menu > li:hover .submenu { display: block; }
+    .submenu li { padding: 5px 10px; color: #ccc; }
+    .submenu li a { color: #ccc; text-decoration: none; }
+    .submenu li a:hover { color: #00e0ff; }
+    .logo a { font-weight: bold; background: #555; color: white; padding: 10px; border-radius: 4px; text-decoration: none; display: inline-block; }
+    .content { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+    h1 { font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
+    h2 { margin-top: 2rem; margin-bottom: 1rem; }
+    footer {
+      background-color: #111;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+    .footer-left,
+    .footer-center,
+    .footer-right { display: flex; align-items: center; gap: 15px; }
+    .footer-left a,
+    .footer-center a { color: #ccc; text-decoration: none; font-weight: bold; transition: color 0.2s; }
+    .footer-left a:hover,
+    .footer-center a:hover { color: #00e0ff; }
+    .footer-icon { width: 24px; height: 24px; transition: transform 0.2s ease; }
+    .footer-icon:hover { transform: scale(1.2); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <div class="logo"><a href="index.html">GTV</a></div>
+        <nav>
+          <ul class="menu">
+            <li>About
+              <ul class="submenu">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Our Staff</a></li>
+                <li><a href="links.html">Links</a></li>
+              </ul>
+            </li>
+            <li>Community
+              <ul class="submenu">
+                <li><a href="events.html">Events</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="media_gallery.html">Media</a></li>
+              </ul>
+            </li>
+            <li>Help
+              <ul class="submenu">
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="navbar-right">
+        <button class="login-disabled">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <h1>Terms of Service</h1>
+    <p>Welcome to GTV. By accessing or using our community resources, you agree to the following terms. These terms are intended to keep our VRChat community fun, safe, and welcoming.</p>
+
+    <h2>1. Use of Our Services</h2>
+    <p>GTV is a community-driven group focused on VRChat events and projects. You may use our services only for lawful purposes and in accordance with these terms.</p>
+
+    <h2>2. Code of Conduct</h2>
+    <p>Be respectful, avoid harassment, and follow VRChat's community guidelines at all times. We reserve the right to remove users who disrupt the experience for others.</p>
+
+    <h2>3. Content Ownership</h2>
+    <p>Members retain ownership of their original creations but grant GTV permission to showcase them on our website and events. Do not upload content that you do not have rights to share.</p>
+
+    <h2>4. Limitation of Liability</h2>
+    <p>GTV is provided "as is" without warranties of any kind. We are not liable for damages arising from participation in our community or use of our resources.</p>
+
+    <h2>5. Changes to These Terms</h2>
+    <p>We may update these terms from time to time. Continued use of our services after changes constitutes your acceptance of the revised terms.</p>
+
+    <h2>6. Contact Us</h2>
+    <p>If you have questions about these terms, please reach out through our Discord server or the contact links provided on this site.</p>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <a href="https://www.twitch.tv/gtv_vrc" target="_blank"><img src="twitch_icon.png" alt="Twitch" class="footer-icon"></a>
+      <a href="https://discord.gg/MnuzHBgRuF" target="_blank"><img src="discord_icon.png" alt="Discord" class="footer-icon"></a>
+      <a href="https://www.youtube.com/@gtv-noob" target="_blank"><img src="youtube_icon.png" alt="YouTube" class="footer-icon"></a>
+    </div>
+    <div class="footer-center">
+      <a href="tos.html">Terms of Service</a>
+      <a href="#">Support Us</a>
+    </div>
+    <div class="footer-right">
+      &copy; 2025 GTV. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
