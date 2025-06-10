@@ -1,300 +1,562 @@
+<!-- ========================
+     Staff Team Code
+=========================== -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meet the Staff Team – GTV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(145deg, #0d1117, #1f2937);
-      color: white;
-      overflow-x: hidden;
-    }
-    header {
-      background-color: #0d1117;
-      padding: 10px 30px;
-      z-index: 2;
-    }
-    .navbar-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .navbar-left {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-    .menu {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    .menu > li {
-      position: relative;
-      cursor: pointer;
-      padding: 10px 15px;
-    }
-    .submenu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #1f2937;
-      padding: 10px;
-      list-style: none;
-      border-radius: 5px;
-    }
-    .menu > li:hover .submenu {
-      display: block;
-    }
-    .submenu li a {
-      color: #ccc;
-      text-decoration: none;
-    }
-    .submenu li a:hover {
-      color: #00e0ff;
-    }
-    .logo a {
-      font-weight: bold;
-      background: #555;
-      color: white;
-      padding: 10px;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-    .navbar-right .login-disabled {
-      background-color: #3a3a3a;
-      color: #aaa;
-      padding: 10px 20px;
-      border-radius: 20px;
-      border: none;
-      cursor: not-allowed;
-    }
-    .hero {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 4rem;
-      color: #00e0ff;
-      animation: fadeInDown 1.5s ease-out;
-    }
-    .section {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .section h2 {
-      font-size: 2.5rem;
-      color: #00e0ff;
-      margin-bottom: 2rem;
-    }
-    .team-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      justify-items: center;
-    }
-    .member-box {
-      background-color: #1e293b;
-      width: 250px;
-      height: 375px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 224, 255, 0.25);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-    .member-box img {
-      width: 100%;
-      height: 33%;
-      object-fit: cover;
-    }
-    .member-box-content {
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .member-box-content h3 {
-      color: #00e0ff;
-      font-size: 1.2rem;
-      margin: 0.2rem 0;
-    }
-    .member-box-content p {
-      margin: 0.3rem 0;
-      font-size: 0.9rem;
-    }
-    .member-box-content a {
-      color: #00bfff;
-      text-decoration: none;
-    }
-    footer {
-      background-color: #111;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      color: #ccc;
-      font-size: 0.9rem;
-    }
-    .footer-left,
-    .footer-center,
-    .footer-right {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    .footer-icon {
-      width: 24px;
-      height: 24px;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet the Staff Team – GTV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        /* ========== BASE RESET ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #0d1117, #1f2937);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* ================= NAVBAR SECTION ================= */
+        header {
+            background-color: #f2eee8;
+            padding: 10px 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+            .menu > li {
+                position: relative;
+                cursor: pointer;
+                padding: 10px 15px;
+                background-color: transparent;
+                margin-right: -20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #333333;
+                transition: background-color 0.5s;
+                min-width: 150px;
+                cursor: default;
+            }
+
+                .menu > li:hover {
+                    background-color: #d3c1af;
+                }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #e0d6c8;
+            padding: 10px 0;
+            list-style: none;
+            border-radius: 5px;
+            z-index: 10;
+            min-width: 150px;
+        }
+
+        .menu > li:hover > .submenu {
+            display: block;
+        }
+
+        .submenu li {
+            position: relative;
+            padding: 15px 15px;
+            color: #333333;
+            white-space: nowrap;
+            transition: color 0.3s ease-in-out, background-color 0.5s linear;
+        }
+
+            .submenu li:hover {
+                background-color: #d3c1af;
+                color: #eb752d;
+            }
+
+            .submenu li .submenu {
+                display: none;
+                position: absolute;
+                top: -15%;
+                left: 100%;
+                background-color: #e0d6c8;
+                padding: 10px 0;
+                list-style: none;
+                border-radius: 5px;
+                z-index: 10;
+                min-width: 150px;
+            }
+
+                .submenu li:hover > .submenu,
+                .submenu li .submenu:hover {
+                    display: block;
+                }
+
+            .submenu li a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                color: #333333;
+                text-decoration: none;
+                padding: 0;
+                box-sizing: border-box;
+                transition: color 0.3s ease;
+            }
+
+                .submenu li a:hover {
+                    color: #00e0ff;
+                    text-decoration: underline;
+                }
+
+        /* ========== LOGO STYLING ========== */
+
+        .logo a {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .logo-img {
+            width: 90px;
+            height: 60px;
+            cursor: pointer;
+            animation: bounceLoop 0.6s ease-in-out infinite;
+            transition: filter 0.3s ease;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes wiggle {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(5deg);
+            }
+
+            75% {
+                transform: rotate(-5deg);
+            }
+        }
+
+        @keyframes bounceLoop {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .logo-img:hover {
+            animation: bounce 0.4s ease forwards, wiggle 0.5s ease-in-out infinite 0.4s;
+            filter: drop-shadow(0 0 8px #eb752d);
+        }
+
+
+        .navbar-right .login-disabled {
+            background-color: #c5c5c5;
+            color: #555555;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: not-allowed;
+        }
+
+        /* ================= HERO SECTION ================= */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+            .hero h1 {
+                font-size: 4rem;
+                color: #00e0ff;
+                animation: fadeInDown 1.5s ease-out;
+            }
+
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+            .section h2 {
+                font-size: 2.5rem;
+                color: #00e0ff;
+                margin-bottom: 2rem;
+            }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+        }
+
+        .member-box {
+            background-color: #1e293b;
+            width: 250px;
+            height: 375px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 224, 255, 0.25);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .member-box img {
+                width: 100%;
+                height: 33%;
+                object-fit: cover;
+            }
+
+        .member-box-content {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+            .member-box-content h3 {
+                color: #00e0ff;
+                font-size: 1.2rem;
+                margin: 0.2rem 0;
+            }
+
+            .member-box-content p {
+                margin: 0.3rem 0;
+                font-size: 0.9rem;
+            }
+
+            .member-box-content a {
+                color: #00bfff;
+                text-decoration: none;
+            }
+
+        /* ========== FOOTER SECTION ========== */
+        footer {
+            background-color: #111;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .footer-left,
+        .footer-center,
+        .footer-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+            .footer-left a,
+            .footer-center a {
+                color: #ccc;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.2s;
+            }
+
+                .footer-left a:hover,
+                .footer-center a:hover {
+                    color: #00e0ff;
+                }
+
+        .footer-icon {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.2s ease;
+        }
+
+            .footer-icon:hover {
+                transform: scale(1.2);
+            }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <div class="navbar-container">
-      <div class="navbar-left">
-        <div class="logo"><a href="https://chatgtv.io">[Put Logo Here]</a></div>
-        <nav>
-          <ul class="menu">
-            <li>About
-              <ul class="submenu">
-                <li><a href="inkop100.html">The Founder</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="team.html">Our Staff</a></li>
-              </ul>
-            </li>
-            <li>Community
-              <ul class="submenu">
-                <li><a href="events.html">Events</a></li>
-                <li><a href="media_gallery.html">Media Gallery</a></li>
-                <li><a href="projects.html">Projects</a></li>
-              </ul>
-            </li>
-            <li>Help
-              <ul class="submenu">
-                <li><a href="links.html">More</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="navbar-right">
-        <button class="login-disabled">Login</button>
-      </div>
-    </div>
-  </header>
 
-  <div class="hero">
-    <h1>Meet the Staff Team</h1>
-  </div>
 
-  <!-- ===== GROUP: Admin Team ===== -->
-  <div class="section">
-    <h2>Admin Team</h2>
-    <div class="team-container">
-      <div class="member-box">
-        <img src="" alt="Siso">
-        <div class="member-box-content">
-          <h3>Siso</h3>
-          <p>VRChat: <a href="https://vrchat.com/home/user/usr_537d2188-4492-45d5-9700-5b8be3b89ef9" target="_blank">Siso6969</a></p>
-        </div>
-      </div>
-      <div class="member-box">
-        <img src="" alt="Negi">
-        <div class="member-box-content">
-          <h3>Negi</h3>
-          <p>VRChat: <a href="https://vrchat.com/home/user/usr_add718a9-4dd9-4356-baf7-d48ea7f395fb" target="_blank">～紫ねぎ～</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- ========== NAVBAR SECTION ========== -->
+    <header>
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <div class="logo">
+                    <a href="https://chatgtv.io">
+                        <img data-src="photo/gtv_logo.png" alt="GTV Logo" class="logo-img">
+                    </a>
+                </div>
+                <nav id="main-nav">
+                    <ul class="menu">
+                        <li>
+                            <span>About</span>
+                            <ul class="submenu">
+                                <li>
+                                    <span>About</span>
+                                    <ul class="submenu">
+                                        <li><a data-path="htmls/About/About/the_founder.html">The Founder</a></li>
+                                        <li><a data-path="htmls/About/About/about_us.html">About Us</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Hierarchy</span>
+                                    <ul class="submenu">
+                                        <li><a data-path="htmls/About/Hierarchy/ranking_system.html">Ranking System</a></li>
+                                        <li><a data-path="htmls/About/Hierarchy/staff_team.html">Staff Team</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Info</span>
+                                    <ul class="submenu">
+                                        <li><a data-path="htmls/About/Info/blog.html">Blog</a></li>
+                                        <li><a data-path="htmls/About/Info/press.html">Press</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
 
-  <!-- ===== GROUP: Moderators ===== -->
-  <div class="section">
-    <h2>Moderator Team</h2>
-    <div class="team-container">
-      <div class="member-box">
-        <img src="" alt="JustinCastro">
-        <div class="member-box-content">
-          <h3>JustinCastro</h3>
-          <p>VRChat: <a href="https://vrchat.com/home/user/usr_242b3c59-2d00-4a2c-b840-9479bcfa3d94" target="_blank">justincastro517</a></p>
-        </div>
-      </div>
-      <div class="member-box">
-        <img src="" alt="Stamtron">
-        <div class="member-box-content">
-          <h3>Stamtron</h3>
-          <p>VRChat: <a href="https://vrchat.com/home/user/usr_c30cd662-bcc3-46db-9c14-57b075364568" target="_blank">Stamtron23</a></p>
-        </div>
-      </div>
-      <div class="member-box">
-        <img src="" alt="BrokenPerson">
-        <div class="member-box-content">
-          <h3>BrokenPerson</h3>
-          <p>VRChat: <a href="https://vrchat.com/home/user/usr_c8389e8c-487f-4b05-a9bf-9cb87ffb5652" target="_blank">Br0kenPers0n21</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
+                        <li>
+                            Community
+                            <ul class="submenu">
+                                <li>
+                                    Community
+                                    <ul class="submenu">
+                                        <li><a data-path="htmls/Community/Community/rules.html">Rules</a></li>
+                                        <li><a data-path="htmls/Community/Community/guidelines.html">Guidelines</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Events
+                                    <ul class="submenu">
+                                        <li><a data-path="htmls/Community/Events/schedule.html">Schedule</a></li>
+                                        <li><a data-path="htmls/Community/Events/projects.html">Projects</a></li>
+                                        <li><a data-path="htmls/Community/Events/media_gallery.html">Media Gallery</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Creative
+                                    <ul class="submenu">
+                                        <li>
+                                            VRChat
+                                            <ul class="submenu">
+                                                <li><a href="https://vrchat.com/home/avatar/avtr_ed5da0f3-a8c8-47ef-a994-61472447e24b" target="_blank">Avatars</a></li>
+                                                <li><a href="https://vrchat.com/home/world/wrld_f05f3b59-ffa9-4114-9ae0-ffbc27b62ff6/info" target="_blank">Worlds</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
 
-  <!-- === CONTINUED MODERATOR SECTION === -->
-  <div class="section">
-    <div class="team-container">
-      <div class="member-box">
-        <img src="" alt="Ghostib">
-        <div class="member-box-content">
-          <h3>Ghostib</h3>
-          <p>VRChat: <a href="https://vrchat.com/home/user/usr_b33b9e4f-f55b-445f-b3c6-f4a91d798fce" target="_blank">Ghostib</a></p>
+                        <li>
+                            Help
+                            <ul class="submenu">
+                                <li>
+                                    Help
+                                    <ul class="submenu">
+                                        <li>
+                                            Help
+                                            <ul class="submenu">
+                                                <li><a data-path="htmls/Help/Help/Help/help.html" target="_blank">help...? Help! HELP!!!</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    More
+                                    <ul class="submenu">
+                                        <li><a data-path="htmls/Help/More/faqs.html">FAQs</a></li>
+                                        <li><a data-path="htmls/Help/More/contact_us.html">Contact Us</a></li>
+                                        <li><a data-path="htmls/Help/More/links.html">Links</a></li>
+                                    </ul>
+                                </li>
+                                <li><span style="color: gray; cursor: not-allowed;">Coming Soon</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="navbar-right">
+                <button class="login-disabled">Login</button>
+            </div>
         </div>
-      </div>
-      <div class="member-box">
-        <img src="" alt="Feral Stella">
-        <div class="member-box-content">
-          <h3>Feral Stella</h3>
-          <p>VRChat: <a href="https://vrchat.com/home/user/usr_00c9c0e3-9a3b-4213-b17b-dadfac90905b" target="_blank">Feral Stella</a></p>
-        </div>
-      </div>
-      <div class="member-box">
-        <img src="" alt="Kytezia">
-        <div class="member-box-content">
-          <h3>Kytezia</h3>
-          <p>VRChat: <a href="https://vrchat.com/home/user/usr_0f041bda-5551-4e7e-be02-3d0d4b39ee6a" target="_blank">kytezia</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
+    </header>
 
-  <footer>
-    <div class="footer-left">
-      <a href="https://www.twitch.tv/gtv_vrc" target="_blank"><img src="twitch_icon.png" alt="Twitch" class="footer-icon"></a>
-      <a href="https://discord.gg/MnuzHBgRuF" target="_blank"><img src="discord_icon.png" alt="Discord" class="footer-icon"></a>
-      <a href="https://www.youtube.com/@gtv-noob" target="_blank"><img src="youtube_icon.png" alt="YouTube" class="footer-icon"></a>
+    <div class="hero">
+        <h1>Meet the Staff Team</h1>
     </div>
-    <div class="footer-center">
-      <a href="#">Terms of Service</a>
-      <a href="#">Support Us</a>
+
+    <!-- ===== GROUP: Admin Team ===== -->
+    <div class="section">
+        <h2>Admin Team</h2>
+        <div class="team-container">
+            <div class="member-box">
+                <img src="" alt="Siso">
+                <div class="member-box-content">
+                    <h3>Siso</h3>
+                    <p>VRChat: <a href="https://vrchat.com/home/user/usr_537d2188-4492-45d5-9700-5b8be3b89ef9" target="_blank">Siso6969</a></p>
+                </div>
+            </div>
+            <div class="member-box">
+                <img src="" alt="Negi">
+                <div class="member-box-content">
+                    <h3>Negi</h3>
+                    <p>VRChat: <a href="https://vrchat.com/home/user/usr_add718a9-4dd9-4356-baf7-d48ea7f395fb" target="_blank">～紫ねぎ～</a></p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="footer-right">
-      &copy; 2025 GTV. All rights reserved.
+
+    <!-- ===== GROUP: Moderators ===== -->
+    <div class="section">
+        <h2>Moderator Team</h2>
+        <div class="team-container">
+            <div class="member-box">
+                <img src="" alt="JustinCastro">
+                <div class="member-box-content">
+                    <h3>JustinCastro</h3>
+                    <p>VRChat: <a href="https://vrchat.com/home/user/usr_242b3c59-2d00-4a2c-b840-9479bcfa3d94" target="_blank">justincastro517</a></p>
+                </div>
+            </div>
+            <div class="member-box">
+                <img src="" alt="Stamtron">
+                <div class="member-box-content">
+                    <h3>Stamtron</h3>
+                    <p>VRChat: <a href="https://vrchat.com/home/user/usr_c30cd662-bcc3-46db-9c14-57b075364568" target="_blank">Stamtron23</a></p>
+                </div>
+            </div>
+            <div class="member-box">
+                <img src="" alt="BrokenPerson">
+                <div class="member-box-content">
+                    <h3>BrokenPerson</h3>
+                    <p>VRChat: <a href="https://vrchat.com/home/user/usr_c8389e8c-487f-4b05-a9bf-9cb87ffb5652" target="_blank">Br0kenPers0n21</a></p>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
+
+    <!-- === CONTINUED MODERATOR SECTION === -->
+    <div class="section">
+        <div class="team-container">
+            <div class="member-box">
+                <img src="" alt="Ghostib">
+                <div class="member-box-content">
+                    <h3>Ghostib</h3>
+                    <p>VRChat: <a href="https://vrchat.com/home/user/usr_b33b9e4f-f55b-445f-b3c6-f4a91d798fce" target="_blank">Ghostib</a></p>
+                </div>
+            </div>
+            <div class="member-box">
+                <img src="" alt="Feral Stella">
+                <div class="member-box-content">
+                    <h3>Feral Stella</h3>
+                    <p>VRChat: <a href="https://vrchat.com/home/user/usr_00c9c0e3-9a3b-4213-b17b-dadfac90905b" target="_blank">Feral Stella</a></p>
+                </div>
+            </div>
+            <div class="member-box">
+                <img src="" alt="Kytezia">
+                <div class="member-box-content">
+                    <h3>Kytezia</h3>
+                    <p>VRChat: <a href="https://vrchat.com/home/user/usr_0f041bda-5551-4e7e-be02-3d0d4b39ee6a" target="_blank">kytezia</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER SECTION ========== -->
+    <footer>
+        <div class="footer-left">
+            <a href="https://www.twitch.tv/gtv_vrc" target="_blank"><img data-src="photo/twitch_icon.png" alt="Twitch" class="footer-icon"></a>
+            <a href="https://discord.gg/MnuzHBgRuF" target="_blank"><img data-src="photo/discord_icon.png" alt="Discord" class="footer-icon"></a>
+            <a href="https://www.youtube.com/@gtv-noob" target="_blank"><img data-src="photo/youtube_icon.png" alt="YouTube" class="footer-icon"></a>
+        </div>
+        <div class="footer-center">
+            <a data-path="htmls/terms_of_service.html">Terms of Service</a>
+            <a data-path="tos.html">ToS2</a>
+        </div>
+        <div class="footer-right">
+            &copy; 2025 GTV. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- ========== JavaScript ========== -->
+    <script>
+        function fixLinks(scope = document) {
+            const isGitHub = location.hostname.endsWith('.github.io');
+            const prefix = isGitHub ? '/chatgtv-site/' : '/';
+
+            scope.querySelectorAll('a[data-path]').forEach(a => {
+                a.href = prefix + a.dataset.path.replace(/^\/?/, '');
+            });
+
+            scope.querySelectorAll('img[data-src]').forEach(img => {
+                img.src = prefix + img.dataset.src.replace(/^\/?/, '');
+            });
+        }
+
+        fetch('/partials/navbar.html')
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+                fixLinks(document.getElementById('navbar-container'));
+            });
+
+        document.addEventListener('DOMContentLoaded', () => fixLinks());
+    </script>
+
 </body>
 </html>
