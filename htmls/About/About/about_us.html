@@ -349,7 +349,7 @@
             <div class="navbar-left">
                 <div class="logo">
                     <a href="https://chatgtv.io">
-                        <img data-path="photo/gtv_logo.png" alt="GTV Logo" class="logo-img">
+                        <img data-src="photo/gtv_logo.png" alt="GTV Logo" class="logo-img">
                     </a>
                 </div>
                 <nav id="main-nav">
@@ -501,13 +501,13 @@
     <!-- ========== FOOTER SECTION ========== -->
     <footer>
         <div class="footer-left">
-            <a href="https://www.twitch.tv/gtv_vrc" target="_blank"><img src="photo/twitch_icon.png" alt="Twitch" class="footer-icon"></a>
-            <a href="https://discord.gg/MnuzHBgRuF" target="_blank"><img src="photo/discord_icon.png" alt="Discord" class="footer-icon"></a>
-            <a href="https://www.youtube.com/@gtv-noob" target="_blank"><img src="photo/youtube_icon.png" alt="YouTube" class="footer-icon"></a>
+            <a href="https://www.twitch.tv/gtv_vrc" target="_blank"><img data-src="photo/twitch_icon.png" alt="Twitch" class="footer-icon"></a>
+            <a href="https://discord.gg/MnuzHBgRuF" target="_blank"><img data-src="photo/discord_icon.png" alt="Discord" class="footer-icon"></a>
+            <a href="https://www.youtube.com/@gtv-noob" target="_blank"><img data-src="photo/youtube_icon.png" alt="YouTube" class="footer-icon"></a>
         </div>
         <div class="footer-center">
-            <a href="htmls/terms_of_service.html">Terms of Service</a>
-            <a href="tos.html">ToS2</a>
+            <a data-path="htmls/terms_of_service.html">Terms of Service</a>
+            <a data-path="tos.html">ToS2</a>
         </div>
         <div class="footer-right">
             &copy; 2025 GTV. All rights reserved.
@@ -538,6 +538,10 @@
 
             scope.querySelectorAll('a[data-path]').forEach(a => {
                 a.href = prefix + a.dataset.path.replace(/^\/?/, '');
+            });
+
+            scope.querySelectorAll('img[data-src]').forEach(img => {
+                img.src = prefix + img.dataset.src.replace(/^\/?/, '');
             });
         }
 

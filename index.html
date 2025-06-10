@@ -362,7 +362,7 @@
         <div class="navbar-container">
             <div class="navbar-left">
                 <div class="logo"><a href="https://chatgtv.io">
-                    <img data-path="photo/gtv_logo.png" alt="GTV Logo" class="logo-img">
+                    <img data-src="photo/gtv_logo.png" alt="GTV Logo" class="logo-img">
                      </a>
                 </div>
                 <nav id="main-nav">
@@ -528,6 +528,10 @@
 
             scope.querySelectorAll('a[data-path]').forEach(a => {
                 a.href = prefix + a.dataset.path.replace(/^\/?/, '');
+            });
+
+            scope.querySelectorAll('img[data-src]').forEach(img => {
+                img.src = prefix + img.dataset.src.replace(/^\/?/, '');
             });
         }
 
