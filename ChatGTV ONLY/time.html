@@ -1,0 +1,79 @@
+﻿<!-- ========================
+     Time Code (for ChatGTV ONLY!)
+=========================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Current Time - Germany</title>
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #00e0ff;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .time-block {
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .label {
+            color: #888;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="time-block">
+        <div class="label">Date</div>
+        <div id="date-display">Loading...</div>
+
+        <div class="label" style="margin-top: 1rem;">Time</div>
+        <div id="time-display">Loading...</div>
+
+        <div class="label" style="margin-top: 1rem;">Timezone</div>
+        <div>Europe/Berlin (UTC+2)</div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+
+            const dateOptions = {
+                timeZone: 'Europe/Berlin',
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+
+            const timeOptions = {
+                timeZone: 'Europe/Berlin',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            };
+
+            const berlinDate = new Intl.DateTimeFormat('en-GB', dateOptions).format(now);
+            const berlinTime = new Intl.DateTimeFormat('en-GB', timeOptions).format(now);
+
+            document.getElementById('date-display').textContent = berlinDate;
+            document.getElementById('time-display').textContent = berlinTime;
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

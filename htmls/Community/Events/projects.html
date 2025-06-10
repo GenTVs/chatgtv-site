@@ -242,6 +242,54 @@
                 font-size: 0.95rem;
                 color: #ccc;
             }
+
+        /* ========== Clean Status Banner ========== */
+        .status-banner {
+            max-width: 900px;
+            background-color: #1e2a3a;
+            margin: 3rem auto 1rem;
+            padding: 1.2rem 2rem;
+            color: #ffdd57;
+            font-size: 0.95rem;
+            border-left: 5px solid #ff9900;
+            border-radius: 8px;
+            text-align: left;
+            box-shadow: 0 0 8px rgba(255, 204, 0, 0.2);
+        }
+
+        /* Tweak project grid spacing */
+        .projects-grid {
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Make cards more elegant */
+        .project-card {
+            text-align: left;
+            padding: 1.8rem 1.5rem;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 768px) {
+            .projects-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-card {
+                width: 90%;
+            }
+
+            .status-banner {
+                margin: 2rem 1rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
         /* ========== FOOTER SECTION ========== */
         footer {
             background-color: #111;
@@ -414,9 +462,9 @@
         </div>
     </div>
 
-    <p class="footer-note">
+    <div class="status-banner">
         ⚠️ Many Projects are in progress at low speed. The one who responsible for these Projects are The GTV Team. To follow-up, please check our Discord Server announcements. Contact our Admins if you have any question.
-    </p>
+    </div>
 
     <!-- ========== FOOTER SECTION ========== -->
     <footer>
