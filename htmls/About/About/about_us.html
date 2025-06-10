@@ -522,7 +522,7 @@
             const prefix = isGitHub ? '/chatgtv-site/' : '/';
 
             document.querySelectorAll('a[data-path]').forEach(a => {
-                a.href = prefix + a.dataset.path;
+                a.href = prefix + a.dataset.path.replace(/^\/?/, '');
             });
         });
         function toggleDetails() {
