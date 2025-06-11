@@ -1,5 +1,5 @@
 <!-- ========================
-     Blog Code
+     gtv-update-030 blog post
 =========================== -->
 
 <!DOCTYPE html>
@@ -7,16 +7,34 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GTV Blog</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" /> <!-- Your global stylesheet if needed -->
+    <title>ChatGTV and chatgtv.io – GTV Update 0.3.0</title>
+
+    <!-- 🌐 Open Graph (Discord Preview) -->
+    <meta property="og:title" content="Developer Update - June 10 2025" />
+    <meta property="og:description" content="Welcome to one of our most exciting updates yet!\n\n\After weeks of late-night designing, coding, testing, and reorganizing content, we’re proud to announce the semi-official release of the brand-new GTV Website and a massive upgrade to our in-house assistant, ChatGTV. While the launch is still considered unofficial due to several sections being incomplete, we wanted to give..." />
+    <meta property="og:url" content="https://chatgtv.io/htmls/About/Info/Blog/gtv-update-030.html" />
+    <meta property="og:image" content="https://chatgtv.io/photo/blog/Developer%20Update%2010%20June%202025.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Blog Post Update" />
+
+    <!-- 🌟 Favicons -->
+    <link rel="icon" type="image/png" href="https://chatgtv.io/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="https://chatgtv.io/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://chatgtv.io/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://chatgtv.io/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ChatGTV" />
+    <link rel="manifest" href="https://chatgtv.io/favicon/site.webmanifest" />
+
     <style>
         /* ========== BASE RESET ========== */
         body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #0d1117;
-            color: white;
+            color: #eaeaea;
+            padding: 30px;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: auto;
         }
 
         /* ================= NAVBAR SECTION ================= */
@@ -195,44 +213,44 @@
         }
 
         /* ================= HERO SECTION ================= */
-        .section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            text-align: center;
+        h1 {
+            font-size: 2.5em;
+            color: #ffffff;
         }
 
-            .section h1 {
-                font-size: 3rem;
-                color: #00e0ff;
-                margin-bottom: 2rem;
+        h2 {
+            font-size: 1.4em;
+            color: #00bcd4;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        strong {
+            color: #ff9800;
+        }
+
+        em {
+            color: #90caf9;
+        }
+
+        a {
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
             }
 
-        .blog-placeholder {
-            border: 2px dashed #444;
-            padding: 4rem;
-            font-size: 1.2rem;
-            color: #aaa;
-        }
-
-        .blog-template-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #00e0ff;
-            color: #0d1117;
-            font-weight: bold;
-            padding: 10px 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            z-index: 999;
-        }
-
-        .blog-template-btn:hover {
-            background-color: #00b3cc;
-            transform: translateY(-2px);
+        section {
+            margin-bottom: 40px;
         }
 
         /* ========== FOOTER SECTION ========== */
@@ -388,18 +406,76 @@
         </div>
     </header>
 
-    <!-- ========== BLOG MAIN PAGE ========== -->
-    <section class="section">
-        <h1>GTV Blog</h1>
-        <div style="max-width: 900px; margin: 0 auto;">
-            <a data-path="htmls/About/Info/Blog/gtv-update-030.html" style="text-decoration: none; color: inherit;">
-                <img data-src="photo/blog/Developer Update 10 June 2025.jpg" alt="Developer Update" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;" />
-                <p style="font-size: 0.9rem; color: #ccc;">6/10/25</p>
-                <h2 style="font-size: 2rem; font-weight: 800; color: white;">ChatGTV and chatgtv.io</h2>
-                <p style="font-size: 1rem; text-decoration: underline; color: #00e0ff;">Read More</p>
-            </a>
-        </div>
-        <a data-path="htmls/About/Info/Blog/blog-template.html" class="blog-template-btn">blog-template</a>
+    <!-- ========== HERO SECTION ========== -->
+    <h1>ChatGTV and chatgtv.io</h1>
+    <h2>GTV Update 0.3.0</h2>
+
+    <img data-src="photo/blog/Developer Update 10 June 2025.jpg" alt="Developer Update Banner" />
+
+    <section>
+        <p>We're proud to announce the release of <strong>GTV Update 0.3.0</strong> — our most important platform update to date! This marks the beginning of a tighter integration between our newly structured <em>chatgtv.io</em> website and our beloved AI assistant, <strong>ChatGTV</strong>.</p>
+    </section>
+
+    <section>
+        <h2>🔧 Major Improvements</h2>
+        <p>This update brings a unified experience for both visitors and community members by enabling <em>real-time content reading</em> for ChatGTV. It now actively references the live content of the site to answer user questions more accurately and with current context.</p>
+    </section>
+
+    <section>
+        <h2>🧠 ChatGTV Just Got Smarter</h2>
+        <p>ChatGTV can now directly read public GTV content, including:</p>
+        <ul>
+            <li><a href="https://chatgtv.io/htmls/About/About/the_founder.html">The Founder</a></li>
+            <li><a href="https://chatgtv.io/htmls/About/About/about_us.html">About Us</a></li>
+            <li><a href="https://chatgtv.io/htmls/About/Hierarchy/staff_team.html">Staff Team</a></li>
+            <li><a href="https://chatgtv.io/htmls/About/Hierarchy/ranking_system.html">Ranking System</a></li>
+            <li><a href="https://chatgtv.io/htmls/About/Info/blog.html">GTV Blog</a></li>
+            <li><a href="https://chatgtv.io/htmls/Community/Community/rules.html">Rules</a></li>
+            <li><a href="https://chatgtv.io/htmls/Community/Community/guidelines.html">Guidelines</a></li>
+            <li><a href="https://chatgtv.io/htmls/Community/Events/schedule.html">Schedule</a></li>
+            <li><a href="https://chatgtv.io/htmls/Help/More/faqs.html">FAQs</a></li>
+        </ul>
+        <p>These are parsed regularly via ChatGTV’s local index.js integration running on your local machine (typically inside <code>C:\Windows\System32\ChatGTV</code>), so make sure your deployment is active.</p>
+    </section>
+
+    <section>
+        <h2>⏱️ Live Time Sync</h2>
+        <p>We’ve also added a hidden page for real-time synchronization: <a href="https://chatgtv.io/ChatGTV%20ONLY/time.html">chatgtv.io/ChatGTV ONLY/time.html</a>. This allows ChatGTV to give current time-based replies in sync with German time zones, ensuring better coordination for announcements or events.</p>
+    </section>
+
+    <section>
+        <h2>🌐 Website Polish</h2>
+        <p>Besides technical improvements, we gave the site a full refresh:</p>
+        <ul>
+            <li>New <strong>Open Graph</strong> and <strong>Twitter Card</strong> previews</li>
+            <li>Brand new <strong>Favicon set</strong> and icon identity</li>
+            <li>Updated <strong>Hero sections</strong> with Grow – Shine – Connect layout</li>
+            <li>Discord-friendly <strong>blog embed previews</strong></li>
+        </ul>
+        <p>Even pages like <a href="https://chatgtv.io/htmls/About/Info/blog.html">Blog</a> now show beautiful thumbnails when shared on Discord or Twitter.</p>
+    </section>
+
+    <section>
+        <h2>🚧 Unofficial Release Status</h2>
+        <p>This version is considered an <em>Unofficial Release</em>. That means:</p>
+        <ul>
+            <li>Some pages (like <strong>Schedule</strong> or <strong>Contact Us</strong>) are still under construction</li>
+            <li>No external contact forms or help desks exist yet</li>
+            <li>Media content (like <strong>Photos and Videos</strong>) is still being prepared</li>
+        </ul>
+        <p>We recommend contacting the GTV team directly via <strong>Discord</strong> until official support options go live.</p>
+    </section>
+
+    <section>
+        <h2>📸 Thumbnail Feature</h2>
+        <p>The update banner features the world: <strong>New Grass Station</strong> by 瑞瑞Rys — a serene sky-platform world full of life and subtle storytelling. <a href="https://vrchat.com/home/world/wrld_8cd302c3-d0b7-4a16-a39b-6860c24ee0c2/info">Visit the world on VRChat</a>.</p>
+    </section>
+
+    <section>
+        <h2>💬 Final Words</h2>
+        <p>We’re beyond excited about this new chapter for GTV. ChatGTV is no longer just a support bot — it’s now our assistant, librarian, and soon-to-be guide for everything GTV. There’s still more to come. And we’ll build it with you.</p>
+
+        <p><em>– The GTV Team</em></p>
     </section>
 
     <!-- ========== FOOTER SECTION ========== -->
@@ -420,6 +496,28 @@
 
     <!-- ========== JavaScript ========== -->
     <script>
+        const video = document.getElementById('hero-video');
+        const btn = document.getElementById('unmute-btn');
+        const videoElement = document.getElementById("hero-video");
+        const playlist = ["video/bg_01.mp4", "video/bg_02.mp4", "video/bg_03.mp4", "video/bg_04.mp4", "video/bg_05.mp4", "video/bg_06.mp4", "video/bg_07.mp4"];
+        let current = 0;
+
+        btn.addEventListener('click', () => {
+            video.muted = !video.muted;
+            if (!video.paused) video.play();
+            btn.textContent = video.muted ? '🔇' : '🔊';
+        });
+
+        function playNext() {
+            if (current >= playlist.length) current = 0;
+            videoElement.src = playlist[current];
+            videoElement.play();
+            current++;
+        }
+
+        videoElement.addEventListener("ended", playNext);
+        playNext();
+
         function fixLinks(scope = document) {
             const isGitHub = location.hostname.endsWith('.github.io');
             const prefix = isGitHub ? '/chatgtv-site/' : '/';
