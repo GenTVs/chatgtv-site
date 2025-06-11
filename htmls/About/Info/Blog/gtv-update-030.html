@@ -496,28 +496,6 @@
 
     <!-- ========== JavaScript ========== -->
     <script>
-        const video = document.getElementById('hero-video');
-        const btn = document.getElementById('unmute-btn');
-        const videoElement = document.getElementById("hero-video");
-        const playlist = ["video/bg_01.mp4", "video/bg_02.mp4", "video/bg_03.mp4", "video/bg_04.mp4", "video/bg_05.mp4", "video/bg_06.mp4", "video/bg_07.mp4"];
-        let current = 0;
-
-        btn.addEventListener('click', () => {
-            video.muted = !video.muted;
-            if (!video.paused) video.play();
-            btn.textContent = video.muted ? '🔇' : '🔊';
-        });
-
-        function playNext() {
-            if (current >= playlist.length) current = 0;
-            videoElement.src = playlist[current];
-            videoElement.play();
-            current++;
-        }
-
-        videoElement.addEventListener("ended", playNext);
-        playNext();
-
         function fixLinks(scope = document) {
             const isGitHub = location.hostname.endsWith('.github.io');
             const prefix = isGitHub ? '/chatgtv-site/' : '/';
